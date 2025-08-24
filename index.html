@@ -1,0 +1,137 @@
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="recipes.js"></script>
+    <script src="icons.js"></script>
+    <script src="main.js"></script>
+    <title>合成计算器</title>
+</head>
+<body>
+<div id="loading">
+    页面加载中，若长时间未加载，请刷新页面或联系作者。
+</div>
+<div id="main" class="container" style="display: none;">
+    <br>
+    <div class="jumbotron">
+        <h1>合成计算器</h1>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" id="introduction-toggle">
+            <h3 class="panel-title">说明（点击显示/隐藏）</h3>
+        </div>
+        <div class="panel-collapse collapse">
+            <div class="panel-body">
+                <p>输入物品名称，在搜索结果中选择物品，即可显示合成该物品所需的材料和合成路线。</p>
+                <p><b>由于淘金和洗矿的结果不确定，因此粉末被视为基础物品。</b></p>
+                <p><b>注：基础物品（无配方物品）不需要添加到已有物品列表，已有物品列表中的基础物品会黄底警告显示。</b></p>
+                <p>点击“计算”按钮，即可重新计算合成过程。（添加或修改已有物品后，请点击“计算”按钮）</p>
+                <p><b>点击任意物品，即可添加到已有物品列表并重新计算合成过程。</b></p>
+                <p>表格操作提示：输入框内按回车键在下方插入，Shift+回车键在上方插入，上下箭头在当前列不同行间跳转，Tab键切换到下一个输入框，Shift+Tab键切换到上一个输入框。</p>
+                <p>本项目在 <a href="https://github.com/myworldzycpc/crafting-calculator">GitHub</a>
+                    上开源。欢迎提出建议、贡献代码、合成配方和物品图标等。</p>
+                <p class="no-margin">如果有想添加的附属，请提交 Issue 或 Pull Request。</p>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="input-item" style="display: flex; align-items: center;">
+            <span style=" display: inline-block; white-space: nowrap; margin-right: 10px;">输入物品：</span>
+            <select id="input-item-select" class="form-control">
+                <option value="single">单物品</option>
+                <option value="multi">多物品（暂不支持搜索）</option>
+            </select>
+        </label>
+        <div id="single-item-input">
+            <input type="text" id="input-item" class="form-control">
+            <div id="search-result" class="panel panel-default">
+                <!-- 搜索结果列表 -->
+                <table class="table"></table>
+            </div>
+        </div>
+        <div id="multi-item-input" style="display: none;">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>物品名称</th>
+                    <th>数量（至少为1，留空或0忽略）</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="item-target-list"></tbody>
+                <tfoot>
+                <tr id="add-item-target-row">
+                    <td colspan="4">
+                        <button class="btn btn-success btn-block" id="add-item-target">+ 添加物品</button>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>已有物品：</label>
+        <table class="table">
+            <thead>
+            <tr id="item-already-have-header">
+                <th></th>
+                <th>物品名称</th>
+                <th>数量（留空表示不限制）</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="item-already-have"></tbody>
+            <tfoot>
+            <tr id="add-item-row">
+                <td colspan="4">
+                    <button class="btn btn-success btn-block" id="add-item">+ 添加物品</button>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary btn-lg btn-block" id="calculate">计算</button>
+    </div>
+    <div id="results" style="display: none;">
+        <div class="form-group">
+            <label>推导过程：</label>
+            <div class="panel panel-default">
+                <div class="panel-heading" id="inference-toggle">显示/隐藏推导过程</div>
+                <div class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p id="inference-panel"></p>
+                        <p id="adjust-order"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>所需物品：</label>
+            <p id="item-needed" class="item-group">石头 x 1000 + 铁矿 x 500</p>
+        </div>
+        <div class="form-group">
+            <label>合成过程：</label>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>所需物品</th>
+                    <th>结果</th>
+                </tr>
+                </thead>
+                <tbody id="recipe-table"></tbody>
+            </table>
+        </div>
+        <div class="form-group">
+            <label>剩余物品：</label>
+            <div id="item-remain">石头 x 1000 + 铁矿 x 500</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

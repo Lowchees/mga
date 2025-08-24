@@ -1,0 +1,461 @@
+#search-result tr.active {
+    background-color: #f5f5f5;
+}
+
+#search-result tr {
+    cursor: pointer;
+}
+
+#search-result td:first-child {
+    width: max-content;
+}
+
+#item-already-have td:first-child {
+    width: max-content;
+}
+
+#inference-toggle,#introduction-toggle {
+    cursor: pointer;
+}
+
+#inference-toggle:hover,#introduction-toggle:hover {
+    filter: brightness(90%);
+}
+
+.item {
+    display: inline-block;
+    line-height: 32px;
+    background-color: #F0F0F0;
+    user-select: none;
+    cursor: pointer;
+    word-wrap: break-word;
+    white-space: nowrap;
+    margin-right: 5px;
+    height: 32px;
+    padding: 0 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #333;
+}
+
+.item.just-icon {
+    margin-right: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+.item:hover {
+    filter: brightness(90%);
+}
+
+.item-icon {
+    height: 32px;
+    image-rendering:pixelated;
+    margin-right: 5px;
+}
+
+.item.just-icon .item-icon {
+    margin-right: 0;
+}
+
+.item-icon-unknown {
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 18px;
+    background-image: url(icons/unknown.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #eee;
+    user-select: none;
+    text-shadow: 1px 1px 1px #000;
+    font-weight: bold;
+}
+
+.item-icon-unknown-double {
+    font-size: 12px;
+}
+
+.plus {
+    margin-right: 5px;
+    user-select: none;
+}
+
+.group-sep {
+    color: #999;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.count {
+    color: #333;
+    font-weight: bold;
+}
+
+.count .plus {
+    margin-right: 0;
+    font-weight: normal;
+}
+
+.group-count {
+    color: #007bff;
+}
+
+.item-group {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5px;
+}
+
+li {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+input.has-error {
+    border-color: #dc3545;
+    background-color: #ffe4e4;
+}
+
+input.has-error:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+    background-color: #ffe4e4;
+}
+
+input.has-warning {
+    border-color: #ffc107;
+    background-color: #fff3cd;
+}
+
+input.has-warning:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+    background-color: #fff3cd;
+}
+
+.search-result-key {
+    line-height: 32px;
+}
+
+/*.search-result-item .item {*/
+/*    height: 16px;*/
+/*}*/
+
+/*.search-result-item .item-icon {*/
+/*    height: 16px;*/
+/*}*/
+
+/*.search-result-item .item-icon-unknown {*/
+/*    height: 16px;*/
+/*    width: 16px;*/
+/*    line-height: 16px;*/
+/*    font-size: 12px;*/
+/*}*/
+
+/*.search-result-item .item-icon-unknown-double {*/
+/*    font-size: 8px;*/
+/*}*/
+
+/*.search-result-item .item-name {*/
+/*    font-size: 14px;*/
+/*    margin-left: 5px;*/
+/*    margin-right: 5px;*/
+/*}*/
+
+/*.search-result-item .item-count {*/
+/*    font-size: 12px;*/
+/*    margin-left: 5px;*/
+/*    margin-right: 5px;*/
+/*}*/
+
+/*.search-result-item .item-count-sep {*/
+/*    margin-left: 5px;*/
+/*    margin-right: 5px;*/
+/*}*/
+
+.no-margin {
+    margin: 0;
+}
+
+.arrow {
+    margin-right: 5px;
+    font-size: 18px;
+    color: #808080;
+}
+
+#input-item-select {
+    display: inline-block;
+}
+
+/*新增样式*/
+/* 稀有度颜色 */
+.rarity-common {
+    border-left: 3px solid #ccc;
+}
+
+.rarity-rare {
+    border-left: 3px solid #007bff;
+}
+
+.rarity-epic {
+    border-left: 3px solid #a020f0;
+}
+
+.rarity-legendary {
+    border-left: 3px solid #ffa500;
+}
+
+/* 地区和稀有度标签 */
+.item-region, .item-rarity {
+    display: inline-block;
+    font-size: 10px;
+    padding: 1px 4px;
+    border-radius: 3px;
+    margin-left: 5px;
+    vertical-align: middle;
+    color: white;
+}
+
+.item-region {
+    background-color: #28a745;
+}
+
+.item-rarity {
+    background-color: #17a2b8;
+}
+
+.item-container {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* 搜索结果中的额外信息 */
+.search-result-item .item-region,
+.search-result-item .item-rarity {
+    font-size: 8px;
+    padding: 0 2px;
+}
+
+.search-result-extra {
+    margin-top: 3px;
+}
+
+.search-result-extra .item-region,
+.search-result-extra .item-rarity {
+    font-size: 10px;
+    padding: 1px 3px;
+}
+
+/* 在 main.css 中添加 */
+.item-price {
+    display: inline-block;
+    font-size: 10px;
+    padding: 1px 4px;
+    border-radius: 3px;
+    margin-left: 5px;
+    vertical-align: middle;
+    color: white;
+    background-color: #ff6b6b;
+}
+
+/* 搜索结果中的价格标签 */
+.search-result-item .item-price {
+    font-size: 8px;
+    padding: 0 2px;
+}
+
+.search-result-extra .item-price {
+    font-size: 10px;
+    padding: 1px 3px;
+}
+
+/* 基础物品标签 */
+.item-base {
+    display: inline-block;
+    font-size: 10px;
+    padding: 1px 4px;
+    border-radius: 3px;
+    margin-left: 5px;
+    vertical-align: middle;
+    color: white;
+    background-color: #6c757d;
+}
+
+/* 搜索结果中的基础物品标签 */
+.search-result-item .item-base {
+    font-size: 8px;
+    padding: 0 2px;
+}
+
+.search-result-extra .item-base {
+    font-size: 10px;
+    padding: 1px 3px;
+}
+
+/* 基础物品特殊样式 */
+.base-item {
+    border-right: 3px solid #6c757d;
+}
+
+/* 推导过程样式优化 */
+#inference-panel {
+    font-family: monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+#inference-panel ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 5px 0;
+}
+
+#inference-panel li {
+    position: relative;
+    margin: 8px 0;
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+#inference-panel li:hover {
+    background-color: #e9ecef;
+    transform: translateX(2px);
+}
+
+#inference-panel li:before {
+    content: "↳ ";
+    color: #6c757d;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* 深度级别颜色区分 */
+#inference-panel li[data-depth="0"] {
+    border-left-color: #28a745;
+    background-color: #f0fff4;
+}
+
+#inference-panel li[data-depth="1"] {
+    border-left-color: #17a2b8;
+    background-color: #e8f4f8;
+}
+
+#inference-panel li[data-depth="2"] {
+    border-left-color: #ffc107;
+    background-color: #fff9e6;
+}
+
+#inference-panel li[data-depth="3"] {
+    border-left-color: #fd7e14;
+    background-color: #fff0e6;
+}
+
+#inference-panel li[data-depth="4"] {
+    border-left-color: #e83e8c;
+    background-color: #ffe6f0;
+}
+
+/* 调整推导过程中的物品显示 */
+#inference-panel .item {
+    margin: 0 2px;
+    padding: 2px 4px;
+    font-size: 12px;
+}
+
+#inference-panel .item-group {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+/* 调整顺序的显示样式 */
+#adjust-order {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+}
+
+#adjust-order ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#adjust-order li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #fdcb6e;
+}
+
+#adjust-order li:last-child {
+    border-bottom: none;
+}
+
+/* 推导过程标题样式 */
+#inference-toggle {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #495057;
+}
+
+#inference-toggle:hover {
+    background-color: #e9ecef;
+}
+
+/* 面板内容样式 */
+.panel-body {
+    padding: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* 滚动条样式 */
+.panel-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.panel-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.panel-body::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.panel-body::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* 推导过程类型标签 */
+.inference-type {
+    display: inline-block;
+    padding: 2px 6px;
+    margin-right: 8px;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    #inference-panel li {
+        padding: 6px 8px;
+    }
+
+    .panel-body {
+        max-height: 300px;
+    }
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配方编辑器</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .ingredient-row {
+            margin-bottom: 10px;
+        }
+        .delete-btn {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>配方编辑器</h1>
+
+    <form id="recipe-form">
+        <div class="form-group">
+            <label for="item-name">物品名称:</label>
+            <input type="text" class="form-control" id="item-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="item-count">产出数量:</label>
+            <input type="number" class="form-control" id="item-count" min="1" value="1">
+        </div>
+
+        <div class="form-group">
+            <label for="item-price">价格 (m):</label>
+            <input type="number" class="form-control" id="item-price" min="0" step="0.1" placeholder="例如: 10.5">
+        </div>
+
+        <div class="form-group">
+            <label>原料:</label>
+            <div id="ingredients-container">
+                <div class="ingredient-row row">
+                    <div class="col-md-5">
+                        <input type="text" class="form-control ingredient-name" placeholder="原料名称" required>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" class="form-control ingredient-count" placeholder="数量" min="1" value="1">
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-danger delete-btn">删除</button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-success" id="add-ingredient">添加原料</button>
+        </div>
+
+        <div class="form-group">
+            <label for="item-region">地区:</label>
+            <select class="form-control" id="item-region">
+                <option value="">无</option>
+                <option value="t1">t1</option>
+                <option value="t1.5">t1.5</option>
+                <option value="t2">t2</option>
+                <option value="t2.5">t2.5</option>
+                <option value="t3">t3</option>
+                <option value="t3.5">t3.5</option>
+                <option value="t4">t4</option>
+                <option value="t5">t5</option>
+                <option value="a1">a1</option>
+                <option value="a2">a2</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="item-rarity">稀有度:</label>
+            <select class="form-control" id="item-rarity">
+                <option value="">无</option>
+                <option value="普通">普通</option>
+                <option value="稀有">稀有</option>
+                <option value="史诗">史诗</option>
+                <option value="传说">传说</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">生成配方代码</button>
+        <button type="button" class="btn btn-default" id="clear-form">清空表单</button>
+    </form>
+
+    <div class="form-group" style="margin-top: 30px;">
+        <label for="output">生成的配方代码:</label>
+        <textarea id="output" class="form-control" rows="10" readonly></textarea>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-info" id="copy-code">复制代码</button>
+    </div>
+</div>
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // 添加原料行
+        $('#add-ingredient').click(function() {
+            const newRow = `
+            <div class="ingredient-row row">
+                <div class="col-md-5">
+                    <input type="text" class="form-control ingredient-name" placeholder="原料名称" required>
+                </div>
+                <div class="col-md-3">
+                    <input type="number" class="form-control ingredient-count" placeholder="数量" min="1" value="1">
+                </div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-danger delete-btn">删除</button>
+                </div>
+            </div>
+        `;
+            $('#ingredients-container').append(newRow);
+        });
+
+        // 删除原料行
+        $(document).on('click', '.delete-btn', function() {
+            if ($('.ingredient-row').length > 1) {
+                $(this).closest('.ingredient-row').remove();
+            } else {
+                alert('至少需要一个原料');
+            }
+        });
+
+        // 清空表单
+        $('#clear-form').click(function() {
+            $('#item-name').val('');
+            $('#item-count').val('1');
+            $('#item-price').val('');
+            $('#item-region').val('');
+            $('#item-rarity').val('');
+            $('#ingredients-container').empty();
+            $('#ingredients-container').append(`
+            <div class="ingredient-row row">
+                <div class="col-md-5">
+                    <input type="text" class="form-control ingredient-name" placeholder="原料名称" required>
+                </div>
+                <div class="col-md-3">
+                    <input type="number" class="form-control ingredient-count" placeholder="数量" min="1" value="1">
+                </div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-danger delete-btn">删除</button>
+                </div>
+            </div>
+        `);
+            $('#output').val('');
+        });
+
+        // 生成配方代码
+        $('#recipe-form').submit(function(e) {
+            e.preventDefault();
+
+            const itemName = $('#item-name').val();
+            const itemCount = parseInt($('#item-count').val());
+            const itemPrice = $('#item-price').val();
+            const region = $('#item-region').val();
+            const rarity = $('#item-rarity').val();
+
+            if (!itemName) {
+                alert('请输入物品名称');
+                return;
+            }
+
+            const ingredients = [];
+            let hasError = false;
+
+            $('.ingredient-row').each(function() {
+                const name = $(this).find('.ingredient-name').val();
+                const count = parseInt($(this).find('.ingredient-count').val());
+
+                if (!name) {
+                    alert('原料名称不能为空');
+                    hasError = true;
+                    return false;
+                }
+
+                if (count === 1) {
+                    ingredients.push([name]);
+                } else {
+                    ingredients.push([name, count]);
+                }
+            });
+
+            if (hasError) return;
+
+            // 生成格式化代码
+            let output = `    "${itemName}": {\n`;
+
+            // 添加原料
+            output += `        "ingredients": [\n`;
+            for (let i = 0; i < ingredients.length; i++) {
+                const ingredient = ingredients[i];
+                if (ingredient.length === 1) {
+                    output += `            ["${ingredient[0]}"]${i < ingredients.length - 1 ? ',' : ''}\n`;
+                } else {
+                    output += `            ["${ingredient[0]}", ${ingredient[1]}]${i < ingredients.length - 1 ? ',' : ''}\n`;
+                }
+            }
+            output += `        ]`;
+
+            // 添加额外字段
+            const additionalFields = [];
+            if (itemCount !== 1) {
+                additionalFields.push(`\n        "count": ${itemCount}`);
+            }
+            if (itemPrice) {
+                additionalFields.push(`\n        "price": ${parseFloat(itemPrice)}`);
+            }
+            if (region) {
+                additionalFields.push(`\n        "region": "${region}"`);
+            }
+            if (rarity) {
+                additionalFields.push(`\n        "rarity": "${rarity}"`);
+            }
+
+            if (additionalFields.length > 0) {
+                output += `,${additionalFields.join(',')}`;
+            }
+
+            output += `\n    },`;
+
+            $('#output').val(output);
+        });
+
+        // 复制代码到剪贴板
+        $('#copy-code').click(function() {
+            const output = $('#output');
+            output.select();
+            document.execCommand('copy');
+            alert('代码已复制到剪贴板');
+        });
+    });
+</script>
+</body>
+</html>
