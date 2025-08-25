@@ -139,41 +139,36 @@ input.has-warning:focus {
     line-height: 32px;
 }
 
-/*.search-result-item .item {*/
-/*    height: 16px;*/
-/*}*/
+/* 调整搜索结果中的物品图标大小 */
+.search-result-item .item {
+    height: 40px;
+    line-height: 40px;
+}
 
-/*.search-result-item .item-icon {*/
-/*    height: 16px;*/
-/*}*/
+.search-result-item .item-icon {
+    height: 40px;
+    width: 40px;
+}
 
-/*.search-result-item .item-icon-unknown {*/
-/*    height: 16px;*/
-/*    width: 16px;*/
-/*    line-height: 16px;*/
-/*    font-size: 12px;*/
-/*}*/
+.search-result-item .item-icon-unknown {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
 
-/*.search-result-item .item-icon-unknown-double {*/
-/*    font-size: 8px;*/
-/*}*/
+.search-result-item .item-icon-unknown-double {
+    font-size: 16px;
+}
 
-/*.search-result-item .item-name {*/
-/*    font-size: 14px;*/
-/*    margin-left: 5px;*/
-/*    margin-right: 5px;*/
-/*}*/
+.search-result-item td:first-child {
+    width: 50px;
+    padding: 5px;
+}
 
-/*.search-result-item .item-count {*/
-/*    font-size: 12px;*/
-/*    margin-left: 5px;*/
-/*    margin-right: 5px;*/
-/*}*/
-
-/*.search-result-item .item-count-sep {*/
-/*    margin-left: 5px;*/
-/*    margin-right: 5px;*/
-/*}*/
+.search-result-item tr {
+    height: 50px;
+}
 
 .no-margin {
     margin: 0;
@@ -270,6 +265,8 @@ input.has-warning:focus {
     font-size: 10px;
     padding: 1px 3px;
 }
+
+
 
 /* 基础物品标签 */
 .item-base {

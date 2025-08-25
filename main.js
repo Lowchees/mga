@@ -591,7 +591,12 @@ function activateSearchItem(key) {
 }
 
 function getIconUrl(key) {
-    return icons[key] ? `icons/${icons[key]}.png` : null;
+    // return icons[key] ? `icons/${icons[key]}.png` : null;
+    const iconPath = icons[key];
+    if (!iconPath || iconPath === "slimefun/") {
+        return null;
+    }
+    return `icons/${iconPath}.png`;
 }
 
 $(function () {
