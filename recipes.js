@@ -121,7 +121,7 @@ let recipes = {
     "嗜血绣剑": {
         "ingredients": [
             ["黄色水晶", 32],
-            ["极血刀", 1],
+            ["汲血刀", 1],
             ["哥布林弯刀", 1],
             ["炽热的锻铁", 32],
             ["游离之魂", 16]
@@ -225,6 +225,19 @@ let recipes = {
         "region": "t5",
         "rarity": "传说"
     },
+    "贪欲斧枪": {
+        "ingredients": [
+            ["短斧|屠夫", 1],
+            ["混沌枪", 1],
+            ["贪婪宝石", 1],
+            ["古兰纳斯之羽", 99],
+            ["幽火碎片", 16]
+        ],
+        "price": 100000,
+        "region": "t5",
+        "rarity": "传说"
+    },
+
 // 塔本
     "镀金战锤": {
         "ingredients": [
@@ -232,7 +245,7 @@ let recipes = {
             ["一阶精铁锭", 64],
             ["二阶世界树枝干", 64],
             ["镀金短刀", 1],
-            ["镀金长刀", 1],
+            ["镀金长刃", 1],
             ["镀金长盾", 1],
             ["镀金法杖", 1]
         ],
@@ -267,9 +280,9 @@ let recipes = {
         "region": "塔",
         "rarity": "史诗"
     },
-    "黑龙龙手": {
+    "黑炎龙手": {
         "ingredients": [
-            ["黑龙龙刀", 2],
+            ["黑龙炎刀", 2],
             ["三阶精铁锭", 64],
             ["三阶魔法水晶", 64]
         ],
@@ -295,7 +308,7 @@ let recipes = {
         "region": "塔",
         "rarity": "传说"
     },
-    "新炎王剑": {
+    "薪炎王剑": {
         "ingredients": [
             ["不灭的余烬", 16],
             ["红莲宝石", 3],
@@ -402,7 +415,7 @@ let recipes = {
     },
     "恶魔契约": {
         "ingredients": [
-            ["猎枪亡灵杀手", 2], // 名称“猎枪忙灵杀手”可能为笔误，但按图片原文保留
+            ["猎枪|亡灵杀手", 2], // 名称“猎枪忙灵杀手”可能为笔误，但按图片原文保留
             ["恶魔拐杖", 3],
             ["腐蚀钢", 32],
             ["恶魔之泉", 128],
@@ -439,7 +452,7 @@ let recipes = {
     },
     "短斧|圣光": {
         "ingredients": [
-            ["腐蚀能力", 8],
+            ["腐蚀熊刀", 8],
             ["瓶中恶魔", 64],
             ["恶魔之泉", 64],
             ["腐蚀钢", 32],
@@ -906,7 +919,7 @@ let recipes = {
         "ingredients": [
             ["白狐", 1],
             ["樱之因子", 24],
-            ["黑樱枪", 2],
+            ["黑缨枪", 2],
             ["技巧宝石", 1],
             ["钛金矿", 64],
             ["大型能量结晶", 5]
@@ -992,6 +1005,15 @@ let recipes = {
             ["生命之泉", 2],
             ["变异血液", 6],
             ["守护核心", 6]
+        ],
+        "region": "t2",
+        "rarity": "史诗"
+    },
+    "军团圣盾": {
+        "ingredients": [
+            ["守护核心", 16],
+            ["胶水", 16],
+            ["多兰之盾", 1]
         ],
         "region": "t2",
         "rarity": "史诗"
@@ -1127,6 +1149,15 @@ let recipes = {
         "region": "t1",
         "rarity": "普通"
     },
+    "精制骨刀": {
+        "ingredients": [
+            ["粗制骨刀", 1],
+            ["羽毛", 16],
+            ["胶水", 8]
+        ],
+        "region": "t2",
+        "rarity": "稀有"
+    },
     "多兰之盾": {
         "ingredients": [
             ["骨头", 16],
@@ -1202,153 +1233,157 @@ let recipes = {
         "region": "t1",
         "rarity": "史诗"
     },
-};
 
-// 基础物品定义（没有配方但有地区和稀有度属性）
-const baseItems = {
-    "金锭": { region: "普通矿", rarity: "普通" },
-    "红石粉": { region: "普通矿", rarity: "普通" },
-    "血刃粗胚": { region: "t5", rarity: "稀有" },
-    "炽热的锻铁": { region: "t5", rarity: "普通" },
-    "兽皮": { region: "t5", rarity: "普通" },
-    "守卫者长靴": { region: "t2", rarity: "稀有" },
-    "哥布林肩甲": { region: "t5", rarity: "稀有" },
-    "飞速丸": { region: "无", rarity: "稀有" },
-    "紫色水晶": { region: "t5", rarity: "史诗" },
-    "破损齿轮": { region: "t5", rarity: "传说" },
-    "魔法卷轴": { region: "t5", rarity: "史诗" },
-    "炮弹": { region: "t5", rarity: "稀有" },
-    "黄色水晶": { region: "t5", rarity: "史诗" },
-    "沙漠残骸": { region: "t5", rarity: "普通" },
-    "虫肉": { region: "t5", rarity: "普通" },
-    "浮岛基岩": { region: "空岛矿", rarity: "普通" },
-    "精灵之魂": { region: "t5", rarity: "稀有" },
-    "游离之魂": { region: "t5", rarity: "史诗" },
-    "大型能量结晶": { region: "无", rarity: "传说" },
-    "干草块": { region: "t1", rarity: "普通" },//
-    "南瓜": { region: "t1", rarity: "普通" },//
-    "钛金矿": { region: "空岛矿", rarity: "史诗" },
-    "恶魔拐杖": { region: "t5", rarity: "史诗" },
-    "绿色水晶": { region: "t5", rarity: "史诗" },
+    "金锭": {region: "普通矿", rarity: "普通"},
+    "红石粉": {region: "普通矿", rarity: "普通"},
+    "血刃粗胚": {region: "t5", rarity: "稀有"},
+    "炽热的锻铁": {region: "t5", rarity: "普通"},
+    "兽皮": {region: "t5", rarity: "普通"},
+    "守卫者长靴": {region: "t2", rarity: "稀有"},
+    "哥布林肩甲": {region: "t5", rarity: "稀有"},
+    "飞速丸": {region: "无", rarity: "稀有"},
+    "紫色水晶": {region: "t5", rarity: "史诗"},
+    "破损齿轮": {region: "t5", rarity: "传说"},
+    "魔法卷轴": {region: "t5", rarity: "史诗"},
+    "炮弹": {region: "t5", rarity: "稀有"},
+    "黄色水晶": {region: "t5", rarity: "史诗"},
+    "沙漠残骸": {region: "t5", rarity: "普通"},
+    "虫肉": {region: "t5", rarity: "普通"},
+    "浮岛基岩": {region: "空岛矿", rarity: "普通"},
+    "精灵之魂": {region: "t5", rarity: "稀有"},
+    "游离之魂": {region: "t5", rarity: "史诗"},
+    "大型能量结晶": {region: "无", rarity: "传说"},
+    "干草块": {region: "t1", rarity: "普通"},//
+    "南瓜": {region: "t1", rarity: "普通"},//
+    "钛金矿": {region: "空岛矿", rarity: "史诗"},
+    "恶魔拐杖": {region: "t5", rarity: "史诗"},
+    "古兰纳斯之羽": {region: "t5", rarity: "传说"},
+    "幽火碎片": {region: "t5", rarity: "传说"},
+    "贪婪宝石": {region: "t5", rarity: "传说"},
+    "绿色水晶": {
+        region: "t5", rarity: "史诗",
+    },
 
-    "一阶精铁锭": { region: "塔", rarity: "普通" },
-    "二阶世界树枝干": { region: "塔", rarity: "普通" },
-    "一阶魔法水晶": { region: "塔", rarity: "普通" },
-    "二阶魔力粉尘": { region: "塔", rarity: "普通" },
-    "三阶世界树枝干": { region: "塔", rarity: "普通" },
-    "三阶魔法水晶": { region: "塔", rarity: "普通" },
-    "三阶精铁锭": { region: "塔", rarity: "普通" },
-    "三阶魔力粉尘": { region: "塔", rarity: "普通" },
-    "不灭的余烬": { region: "塔", rarity: "史诗" },
-    "四阶四焰铁笼": { region: "塔", rarity: "稀有" },
-    "猩红矿": { region: "a1", rarity: "普通" },//
-    "红莲宝石": { region: "无", rarity: "传说" },//
-    "四阶囚焰铁笼": { region: "塔", rarity: "稀有" },
-    "四阶傀儡碎片": { region: "塔", rarity: "稀有" },
-    "四阶提偶碎片": { region: "塔", rarity: "稀有" },
+    "一阶精铁锭": {region: "塔", rarity: "普通"},
+    "二阶世界树枝干": {region: "塔", rarity: "普通"},
+    "一阶魔法水晶": {region: "塔", rarity: "普通"},
+    "二阶魔力粉尘": {region: "塔", rarity: "普通"},
+    "三阶世界树枝干": {region: "塔", rarity: "普通"},
+    "三阶魔法水晶": {region: "塔", rarity: "普通"},
+    "三阶精铁锭": {region: "塔", rarity: "普通"},
+    "三阶魔力粉尘": {region: "塔", rarity: "普通"},
+    "不灭的余烬": {region: "塔", rarity: "史诗"},
+    "四阶四焰铁笼": {region: "塔", rarity: "稀有"},
+    "猩红矿": {region: "a1", rarity: "普通"},//
+    "红莲宝石": {region: "无", rarity: "传说"},//
+    "四阶囚焰铁笼": {region: "塔", rarity: "稀有"},
+    "四阶傀儡碎片": {region: "塔", rarity: "稀有"},
+    "四阶提偶碎片": {region: "塔", rarity: "稀有"},
 
-    "毒液": { region: "t4", rarity: "普通" },
-    "腐蚀法杖": { region: "t4", rarity: "普通" },
-    "铁锭": { region: "普通矿", rarity: "普通" },
-    "水银": { region: "t4", rarity: "普通" },
-    "净化石": { region: "t4", rarity: "史诗" },
-    "防腐剂": { region: "t4", rarity: "稀有" },
-    "腐化水晶": { region: "t4", rarity: "稀有" },
-    "中型能量结晶": { region: "无", rarity: "史诗" }, //
-    "腐蚀液体": { region: "t4", rarity: "稀有" },
-    "净化之灵": { region: "t4", rarity: "史诗" },
-    "腐蚀钢": { region: "t4", rarity: "传说" },
-    "嗜血宝石": { region: "无", rarity: "史诗" },
-    "月光宝石": { region: "无", rarity: "史诗" },
-    "无尽宝石": { region: "无", rarity: "史诗" },
-    "恶魔之泉": { region: "t4", rarity: "稀有" },
-    "瓶中恶魔": { region: "t4", rarity: "稀有" },
+    "毒液": {region: "t4", rarity: "普通"},
+    "腐蚀法杖": {region: "t4", rarity: "普通"},
+    "铁锭": {region: "普通矿", rarity: "普通"},
+    "水银": {region: "t4", rarity: "普通"},
+    "净化石": {region: "t4", rarity: "史诗"},
+    "防腐剂": {region: "t4", rarity: "稀有"},
+    "腐化水晶": {region: "t4", rarity: "稀有"},
+    "中型能量结晶": {region: "无", rarity: "史诗"}, //
+    "腐蚀液体": {region: "t4", rarity: "稀有"},
+    "净化之灵": {region: "t4", rarity: "史诗"},
+    "腐蚀钢": {region: "t4", rarity: "传说"},
+    "嗜血宝石": {region: "无", rarity: "史诗"},
+    "月光宝石": {region: "无", rarity: "史诗"},
+    "无尽宝石": {region: "无", rarity: "史诗"},
+    "恶魔之泉": {region: "t4", rarity: "稀有"},
+    "瓶中恶魔": {region: "t4", rarity: "稀有"},
 
-    "闪电核心": { region: "a2", rarity: "普通" },
-    "寒霜核心": { region: "a2", rarity: "稀有" },
-    "机械核心": { region: "a2", rarity: "史诗" },
-    "电爆盾": { region: "a2", rarity: "稀有" },
-    "混沌核心": { region: "a2", rarity: "史诗" },
-    "治疗仪": { region: "a2", rarity: "稀有" },
-    "铁块": { region: "普通矿", rarity: "普通" },
-    "智械核心": { region: "a2", rarity: "传说" },
-    "重氢": { region: "a2", rarity: "传说" },
-    "激光发射器": { region: "a2", rarity: "稀有" },
+    "闪电核心": {region: "a2", rarity: "普通"},
+    "寒霜核心": {region: "a2", rarity: "稀有"},
+    "机械核心": {region: "a2", rarity: "史诗"},
+    "电爆盾": {region: "a2", rarity: "稀有"},
+    "混沌核心": {region: "a2", rarity: "史诗"},
+    "治疗仪": {region: "a2", rarity: "稀有"},
+    "铁块": {region: "普通矿", rarity: "普通"},
+    "智械核心": {region: "a2", rarity: "传说"},
+    "重氢": {region: "a2", rarity: "传说"},
+    "激光发射器": {region: "a2", rarity: "稀有"},
 
-    "云朵": { region: "a1", rarity: "普通" },
-    "云矿": { region: "a1", rarity: "稀有" },
-    "奇异术": { region: "a1", rarity: "史诗" },
-    "彩虹碎片": { region: "a1", rarity: "稀有" },
-    "铅块": { region: "a1", rarity: "稀有" },
-    "奇异木": { region: "a1", rarity: "普通" },
-    "魔矿": { region: "a1", rarity: "史诗" },
-    "圣石": { region: "a1", rarity: "传说" },
-    "钢块": { region: "a1", rarity: "稀有" },
-    "武士胸甲": { region: "t2", rarity: "稀有" },
-    "石镐(崭新)": { region: "无", rarity: "普通" },
+    "云朵": {region: "a1", rarity: "普通"},
+    "云矿": {region: "a1", rarity: "稀有"},
+    "奇异术": {region: "a1", rarity: "史诗"},
+    "彩虹碎片": {region: "a1", rarity: "稀有"},
+    "铅块": {region: "a1", rarity: "稀有"},
+    "奇异木": {region: "a1", rarity: "普通"},
+    "魔矿": {region: "a1", rarity: "史诗"},
+    "圣石": {region: "a1", rarity: "传说"},
+    "钢块": {region: "a1", rarity: "稀有"},
+    "武士胸甲": {region: "t2", rarity: "稀有"},
+    "石镐(崭新)": {region: "无", rarity: "普通"},
+    "云镐": {region: "a1", rarity: "普通"},
 
-    "陨铁矿": { region: "空岛", rarity: "史诗" },
-    "精制铁镐": { region: "t4", rarity: "史诗" },
-    "秘银矿": { region: "空岛", rarity: "传说" },
-    "森林之镐": { region: "t1", rarity: "稀有" },
-    "钯金矿": { region: "空岛", rarity: "史诗" },
-    "金块": { region: "普通矿", rarity: "稀有" },
-    "叶绿矿": { region: "空岛", rarity: "史诗" },
-    "交易石": { region: "普通矿", rarity: "史诗" },
+    "陨铁矿": {region: "空岛", rarity: "史诗"},
+    "精制铁镐": {region: "t4", rarity: "史诗"},
+    "秘银矿": {region: "空岛", rarity: "传说"},
+    "森林之镐": {region: "t1", rarity: "稀有"},
+    "钯金矿": {region: "空岛", rarity: "史诗"},
+    "金块": {region: "普通矿", rarity: "稀有"},
+    "叶绿矿": {region: "空岛", rarity: "史诗"},
+    "交易石": {region: "普通矿", rarity: "史诗"},
 
-    "破布": { region: "t3", rarity: "普通" },
-    "贤者之石": { region: "t3", rarity: "稀有" },
-    "刀鞘": { region: "t3", rarity: "普通" },
-    "凝血素": { region: "t3", rarity: "稀有" },
-    "大太刀": { region: "t3", rarity: "普通" },
-    "钉子": { region: "t3", rarity: "普通" },
-    "利刃白鞘": { region: "t3", rarity: "普通" },
-    "耀魂": { region: "t3", rarity: "稀有" },
-    "弹射器": { region: "t3", rarity: "稀有" },
-    "钢铁": { region: "t3", rarity: "普通" },
-    "龙刃": { region: "t3", rarity: "史诗" },
-    "迅捷宝石": { region: "t3", rarity: "史诗" },
-    "恢复型面包": { region: "无", rarity: "普通" },
+    "破布": {region: "t3", rarity: "普通"},
+    "贤者之石": {region: "t3", rarity: "稀有"},
+    "刀鞘": {region: "t3", rarity: "普通"},
+    "凝血素": {region: "t3", rarity: "稀有"},
+    "大太刀": {region: "t3", rarity: "普通"},
+    "钉子": {region: "t3", rarity: "普通"},
+    "利刃白鞘": {region: "t3", rarity: "普通"},
+    "耀魂": {region: "t3", rarity: "稀有"},
+    "弹射器": {region: "t3", rarity: "稀有"},
+    "钢铁": {region: "t3", rarity: "普通"},
+    "龙刃": {region: "t3", rarity: "史诗"},
+    "迅捷宝石": {region: "t3", rarity: "史诗"},
+    "恢复型面包": {region: "无", rarity: "普通"},
 
-    "樱之因子": { region: "t3.5", rarity: "传说" },
-    "樱木棍": { region: "t3.5", rarity: "史诗" },
-    "绿石": { region: "t3.5", rarity: "稀有" },
-    "魔法泉水": { region: "t3.5", rarity: "稀有" },
-    "技巧宝石": { region: "t3.5", rarity: "史诗" },
-    "樱花粉": { region: "t3.5", rarity: "史诗" },
-    "钻石块": { region: "普通矿", rarity: "普通" },
+    "樱之因子": {region: "t3.5", rarity: "传说"},
+    "樱木棍": {region: "t3.5", rarity: "史诗"},
+    "绿石": {region: "t3.5", rarity: "稀有"},
+    "魔法泉水": {region: "t3.5", rarity: "稀有"},
+    "技巧宝石": {region: "t3.5", rarity: "史诗"},
+    "樱花粉": {region: "t3.5", rarity: "史诗"},
+    "钻石块": {region: "普通矿", rarity: "普通"},
 
-    "远古守卫者之剑": { region: "t2", rarity: "史诗" },
-    "守卫者长剑": { region: "t2", rarity: "普通" },
-    "变异血液": { region: "t2", rarity: "稀有" },
-    "守护核心": { region: "t2", rarity: "稀有" },
-    "冰盾": { region: "t2.5", rarity: "传说" },
-    "冰雪镰刀": { region: "t2.5", rarity: "传说" },
-    "零件": { region: "t2.5", rarity: "史诗" },
+    "远古守卫者之剑": {region: "t2", rarity: "史诗"},
+    "守卫者长剑": {region: "t2", rarity: "普通"},
+    "变异血液": {region: "t2", rarity: "稀有"},
+    "守护核心": {region: "t2", rarity: "稀有"},
+    "冰盾": {region: "t2.5", rarity: "传说"},
+    "冰雪镰刀": {region: "t2.5", rarity: "传说"},
+    "零件": {region: "t2.5", rarity: "史诗"},
 
     // t1本基础物品
-    "圆石": { region: "普通矿", rarity: "普通" },
-    "羽毛": { region: "t1", rarity: "普通" },
-    "胶水": { region: "t1", rarity: "普通" },
-    "骨头": { region: "t1", rarity: "普通" },
-    "树杈": { region: "t1", rarity: "普通" },
-    "霍斯契约": { region: "t1", rarity: "史诗" },
-    "原初之灵": { region: "t1", rarity: "史诗" },
-    "钻石镐(崭新)": { region: "无", rarity: "普通" },
-    "钻石": { region: "普通矿", rarity: "普通" },
-    "放逐之魂": { region: "t1", rarity: "史诗" },
-    "攀爬之魂": { region: "t1", rarity: "史诗" },
-    "潜行之魂": { region: "t1", rarity: "史诗" },
+    "圆石": {region: "普通矿", rarity: "普通"},
+    "羽毛": {region: "t1", rarity: "普通"},
+    "胶水": {region: "t1", rarity: "普通"},
+    "骨头": {region: "t1", rarity: "普通"},
+    "树杈": {region: "t1", rarity: "普通"},
+    "霍斯契约": {region: "t1", rarity: "史诗"},
+    "原初之灵": {region: "t1", rarity: "史诗"},
+    "钻石镐(崭新)": {region: "无", rarity: "普通"},
+    "钻石": {region: "普通矿", rarity: "普通"},
+    "放逐之魂": {region: "t1", rarity: "史诗"},
+    "攀爬之魂": {region: "t1", rarity: "史诗"},
+    "潜行之魂": {region: "t1", rarity: "史诗"},
 
-    "镀金法杖": { region: "商店", rarity: "史诗" },
-    "镀金长盾": { region: "商店", rarity: "史诗" },
-    "哥布林匕首": { region: "商店", rarity: "稀有" },
+    "镀金法杖": {region: "商店", rarity: "史诗"},
+    "镀金长盾": {region: "商店", rarity: "史诗"},
+    "哥布林匕首": {region: "商店", rarity: "稀有"},
 
 };
 
+
 // 将基础物品合并到recipes中，但不覆盖已有配方
-Object.keys(baseItems).forEach(key => {
-    if (!recipes[key]) {
-        recipes[key] = baseItems[key];
-    }
-});
+// Object.keys(baseItems).forEach(key => {
+//     if (!recipes[key]) {
+//         recipes[key] = baseItems[key];
+//     }
+// });

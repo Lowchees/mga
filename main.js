@@ -1,3 +1,4 @@
+// main.js
 window.activeSearchResult = null;
 window.activeSearchResultIndex = null;
 window.searchResult = [];
@@ -9,7 +10,6 @@ window.remainings = {};
 window.alreadyHave = {};
 window.inferences = [];
 window.currentShowing = [];
-window.multiItemMode = false;
 
 /**
  * 从recipes对象的键中搜索keyword并返回列表
@@ -20,14 +20,14 @@ window.multiItemMode = false;
 function searchItem(keyword) {
     // 开头匹配优先
     let startBy = Object.keys(recipes).filter(key =>
-        key.startsWith(keyword) && (recipes[key].ingredients || baseItems[key])
+        key.startsWith(keyword) && (recipes[key].ingredients || recipes[key].type === "基础")
     );
     // 按先长度后字母排序
     startBy.sort((a, b) => a.length - b.length || a.localeCompare(b));
 
     // 包含匹配其次（不包括startBy）
     let contains = Object.keys(recipes).filter(key =>
-        key.indexOf(keyword) >= 0 && startBy.indexOf(key) < 0 && (recipes[key].ingredients || baseItems[key])
+        key.indexOf(keyword) >= 0 && startBy.indexOf(key) < 0 && (recipes[key].ingredients || recipes[key].type === "基础")
     );
     // 按先长度后字母排序
     contains.sort((a, b) => a.length - b.length || a.localeCompare(b));
@@ -69,7 +69,6 @@ function showResult(result) {
     $result.show();
     setActiveSearchResult($results_table.find('tr:first-child'));
 }
-
 
 function setActiveSearchResult($active) {
     $("#search-result table tr").removeClass("active");
@@ -127,23 +126,29 @@ function calculate(key, count, depth) {
     if (count <= 0) {
         return;
     }
-    // 检查 recipes[key] 是否存在并且有 ingredients 属性（即可合成）
-    if (recipes[key] && recipes[key].ingredients) {
-        const recipeCount = recipes[key].count || 1;
+
+    const recipe = recipes[key];
+
+    // 检查是否有配方（即可合成）
+    if (recipe && recipe.ingredients) {
+        const recipeCount = recipe.count || 1;
         let times = Math.ceil(count / recipeCount);
         const realCount = times * recipeCount;
         const remaining = realCount - count;
+
         // 记录推理
         window.inferences.push({
-            type: recipes[key].type,
+            type: recipe.type,
             depth,
             key,
             realCount,
-            ingredients: recipes[key].ingredients.map(i => ({key: i[0], count: i[1] ? i[1] * count : count}))
+            ingredients: recipe.ingredients.map(i => ({key: i[0], count: i[1] ? i[1] * count : count}))
         });
-        for (const ingredient of recipes[key].ingredients) {
+
+        for (const ingredient of recipe.ingredients) {
             let count1 = ingredient[1] ? ingredient[1] * times : times;
 
+            // 处理已有物品和剩余物品的逻辑保持不变
             if (window.alreadyHave[ingredient[0]]) {
                 const alreadyHaveCount = window.alreadyHave[ingredient[0]];
                 if (alreadyHaveCount === -1) {
@@ -195,45 +200,13 @@ function calculate(key, count, depth) {
 
 function updateInput() {
     doSearch();
-    // if (key.length > 0) {
-    //     showRecipe(key);
-    // }
-}
-
-/**
- * 渲染物品矩阵
- */
-function renderMap(key) {
-    const map = recipes[key].map;
-    return `
-    <table class="item-matrix">
-        ${map.map(row => `
-            <tr>
-                ${row.map(item => `
-                    <td>${renderItem(item, -1)}</td>
-                `).join('')}
-            </tr>
-        `).join('')}
-    </table>
-    `;
 }
 
 function readItemList() {
     let itemList = [];
-    if (!window.multiItemMode) {
-        const key = $("#input-item").val().replace(/\s+/g, '');
-        if (key) {
-            itemList = [[key, 1]];
-        }
-    } else {
-        $("#item-target-list").find("tr").each(function () {
-            const $tr = $(this);
-            const item = $tr.find('input[name=key]').val().replace(/\s+/g, '');
-            const count = $tr.find('input[name=count]').val().replace(/\s+/g, '');
-            if (item && count && parseInt(count) > 0) {
-                itemList.push([item, parseInt(count)]);
-            }
-        });
+    const key = $("#input-item").val().replace(/\s+/g, '');
+    if (key) {
+        itemList = [[key, 1]];
     }
     window.currentShowing = itemList;
 }
@@ -252,16 +225,57 @@ function showRecipe() {
         }
     }
 
-    // 如果有基础物品，显示友好提示
+    // 如果有基础物品，显示特殊提示但保持界面一致性
     if (baseItemsInTarget.length > 0) {
-        const baseItemsList = baseItemsInTarget.map(item => `<span class="item">${renderItem(item, -1)}</span>`).join('、');
-        $("#results").html(`
-            <div class="alert alert-info">
-                <h4>基础物品提示</h4>
-                <p>以下物品是基础物品，无法合成：${baseItemsList}</p>
-                <p>基础物品可以直接获取，无需合成配方。</p>
+        readAlreadyHave();
+
+        // 正常初始化计算变量
+        window.order = [];
+        window.count = {};
+        window.basicCount = {};
+        window.inferences = [];
+        window.remainings = {};
+        window.times = {};
+
+        // 计算基础物品数量
+        for (const item of window.currentShowing) {
+            const key = item[0];
+            const count = item[1];
+            if (recipes[key] && !recipes[key].ingredients) {
+                // 基础物品直接添加到basicCount
+                addBasicCount(key, count);
+            }
+        }
+
+        // 显示结果
+        $("#results").show();
+
+        // 创建基础物品提示
+        const baseItemsList = baseItemsInTarget.map(item =>
+            `<span class="item base-item-highlight">${renderItem(item, -1)}</span>`
+        ).join('、');
+
+        // 在所需物品区域添加提示
+        let basicCountHtml = '';
+        for (const item in basicCount) {
+            basicCountHtml += renderItem(item, basicCount[item]);
+        }
+
+        // 添加基础物品提示
+        $("#item-needed").html(`
+            <div class="alert alert-info base-item-alert">
+                <strong>基础物品提示：</strong>以下物品是基础物品，无需合成：${baseItemsList}
             </div>
-        `).show();
+            ${basicCountHtml}
+        `);
+
+        // 清空合成过程和剩余物品
+        $("#recipe-table").html('<tr><td colspan="2"><div class="text-center text-muted">基础物品无需合成过程</div></td></tr>');
+        $("#item-remain").html('无');
+
+        // 隐藏推导过程
+        $("#inference-toggle").closest('.form-group').hide();
+
         return;
     }
 
@@ -445,14 +459,17 @@ function renderItem(key, count = 0) {
         return `<span class="item-empty"></span>`;
     }
 
-    // 获取物品的额外属性
     const recipe = recipes[key];
-    const region = recipe ? recipe.region : '';
-    const rarity = recipe ? recipe.rarity : '';
-    const price = recipe ? recipe.price : undefined;
-    const isBaseItem = recipe && !recipe.ingredients; // 没有配方的是基础物品
+    if (!recipe) {
+        return `<span class="item" data-key="${key}">${key}</span>`;
+    }
 
-    let rarityClass = '';
+    const region = recipe.region || '';
+    const rarity = recipe.rarity || '';
+    const price = recipe.price !== undefined ? recipe.price : undefined;
+    const isBaseItem = !recipe.ingredients; // 没有配方的是基础物品
+
+    let rarityClass ;
     switch (rarity) {
         case '普通':
             rarityClass = 'rarity-common';
@@ -476,7 +493,7 @@ function renderItem(key, count = 0) {
     }
 
     if (count === -1) {
-        let itemHtml = '';
+        let itemHtml ;
         if (getIconUrl(key)) {
             itemHtml = `<span class="item just-icon ${rarityClass}" data-key="${key}"><img class="item-icon" data-key="${key}" src="${getIconUrl(key)}" alt="" title="${key}"></span>`;
         } else {
@@ -599,7 +616,39 @@ function getIconUrl(key) {
     return `icons/${iconPath}.png`;
 }
 
+function validateRecipes() {
+    const errors = [];
+
+    Object.keys(recipes).forEach(key => {
+        const recipe = recipes[key];
+
+        // 检查合成物品是否有ingredients
+        if (recipe.ingredients && !recipe.type) {
+            recipe.type = "合成"; // 自动添加类型标识
+        }
+
+        // 检查基础物品是否有type
+        if (!recipe.ingredients && !recipe.type) {
+            recipe.type = "基础"; // 自动添加类型标识
+        }
+
+        // 检查配方中的物品是否都存在
+        if (recipe.ingredients) {
+            recipe.ingredients.forEach(ingredient => {
+                if (!recipes[ingredient[0]]) {
+                    errors.push(`配方 ${key} 中的材料 ${ingredient[0]} 不存在`);
+                }
+            });
+        }
+    });
+
+    if (errors.length > 0) {
+        console.warn("配方验证发现错误:", errors);
+    }
+}
+
 $(function () {
+    validateRecipes();
     const $result = $('#search-result');
     $result.hide();
 
@@ -638,63 +687,32 @@ $(function () {
         addAlreadyItem();
     });
 
-    $("#add-item-target").click(function () {
-        $("#item-target-list").append(`
-            <tr>
-                <td>${renderItem('', -1)}</td>
-                <td><input type="text" class="form-control" name="key"></td>
-                <td><input type="text" class="form-control" name="count" oninput="checkNumber(this)" value="1"></td>
-                <td><button class="btn btn-danger" data-action="delete">删除</button></td>
-            </tr>
-        `).find('input[name=key]').last().focus();
-    });
-
-    $("#item-already-have,#item-target-list").on('click', '[data-action=delete]', function (event) {
+    $("#item-already-have").on('click', '[data-action=delete]', function (event) {
         $(event.target).parent().parent().remove();
         showRecipe();
     }).on('focus', 'input', function (event) {
         event.target.select();
     }).on('input', 'input[name=key]', function (event) {
         const key = $(event.target).val().replace(/\s+/g, '');
-        const isItemTargetList = $(event.target).closest("tbody").is("#item-target-list");
         if (key.length > 0) {
             if (recipes[key]) {
                 $(event.target).parent().prev().html(renderItem(key, -1));
                 $(event.target).removeClass('has-error');
                 $(event.target).removeClass('has-warning');
             } else {
-                if (isItemTargetList) {
-                    if (icons[key]) {
-                        $(event.target).parent().prev().html(renderItem(key, -1));
-                    } else {
-                        $(event.target).parent().prev().html(renderItem('', -1));
-                    }
+                if (icons[key]) {
+                    $(event.target).parent().prev().html(renderItem(key, -1));
+                    $(event.target).addClass('has-warning');
+                    $(event.target).removeClass('has-error');
+                } else {
+                    $(event.target).parent().prev().html(renderItem('', -1));
                     $(event.target).addClass('has-error');
                     $(event.target).removeClass('has-warning');
-                } else {
-                    if (icons[key]) {
-                        $(event.target).parent().prev().html(renderItem(key, -1));
-                        $(event.target).addClass('has-warning');
-                        $(event.target).removeClass('has-error');
-                    } else {
-                        $(event.target).parent().prev().html(renderItem('', -1));
-                        $(event.target).addClass('has-error');
-                        $(event.target).removeClass('has-warning');
-                    }
                 }
             }
         } else {
             $(event.target).parent().prev().html(renderItem('', -1));
             $(event.target).removeClass('has-error');
-        }
-    }).on('input', 'input[name=count]', function (event) {
-        if ($(event.target).closest("tbody").is("#item-target-list")) {
-            const count = $(event.target).val().replace(/\s+/g, '');
-            if (count === '' || parseInt(count) <= 0) {
-                $(event.target).addClass('has-error');
-            } else {
-                $(event.target).removeClass('has-error');
-            }
         }
     }).on('keydown', 'input', function (event) {
         if (event.key === 'Enter') {
@@ -703,7 +721,7 @@ $(function () {
                 <tr>
                     <td>${renderItem('', -1)}</td>
                     <td><input type="text" class="form-control" name="key"></td>
-                    <td><input type="text" class="form-control" name="count" oninput="checkNumber(this)" value="${$(event.target).closest("tbody").is("#item-target-list") ? 1 : ''}"></td>
+                    <td><input type="text" class="form-control" name="count" oninput="checkNumber(this)" value=""></td>
                     <td><button class="btn btn-danger" data-action="delete">删除</button></td>
                 </tr>
             `;
@@ -798,39 +816,7 @@ $(function () {
         }
     });
 
-    // $("#add-dusts").click(function () {
-    //     readAlreadyHave();
-    //     for (const dust of ["铁粉", "金粉", "铜粉", "锡粉", "银粉", "铅粉", "铝粉", "锌粉", "镁粉"]) {
-    //         if (window.alreadyHave[dust] === undefined) {
-    //             addAlreadyItem(dust, undefined, false);
-    //         }
-    //     }
-    //     showRecipe();
-    // });
-
     $("#introduction-toggle").next().collapse('toggle');
-
-    $("#item-target-list").append(`
-        <tr>
-            <td>${renderItem('', -1)}</td>
-            <td><input type="text" class="form-control" name="key"></td>
-            <td><input type="text" class="form-control" name="count" oninput="checkNumber(this)" value="1"></td>
-            <td><button class="btn btn-danger" data-action="delete">删除</button></td>
-        </tr>
-    `);
-
-    $("#input-item-select").on('change', function () {
-        const mode = $(this).val();
-        if (mode === "single") {
-            $("#single-item-input").show();
-            $("#multi-item-input").hide();
-            window.multiItemMode = false;
-        } else {
-            $("#single-item-input").hide();
-            $("#multi-item-input").show();
-            window.multiItemMode = true;
-        }
-    });
 
     $("#loading").hide();
     $("#main").show();

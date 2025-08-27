@@ -1798,7 +1798,7 @@ const icons = {
     "黑龙龙手": "slimefun/",
     "黑龙炎刀": "slimefun/",
     "焰之礼横": "slimefun/",
-    "新炎王剑": "slimefun/",
+    "薪炎王剑": "slimefun/",
     "囚徒的镣铐": "slimefun/",
     "毒液发射器": "slimefun/venom_launcher",
     "猎枪|剧毒水银": "slimefun/",
@@ -1900,6 +1900,8 @@ const icons = {
     "获水剑": "slimefun/water_obtaining_sword",
     "贪婪宝石": "slimefun/greed_gem",
     "小型能量结晶": "slimefun/small_energy_crystal",
+    "古兰纳斯之羽": "slimefun/",
+    "幽火碎片": "slimefun/",
 
 
 }
