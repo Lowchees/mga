@@ -216,6 +216,11 @@ function showRecipe() {
         return;
     }
 
+    if (window.currentShowing.length > 0) {
+        const key = window.currentShowing[0][0];
+        showSourceInfo(key);
+    }
+
     // 检查是否有基础物品
     const baseItemsInTarget = [];
     for (const item of window.currentShowing) {
@@ -645,6 +650,70 @@ function validateRecipes() {
     if (errors.length > 0) {
         console.warn("配方验证发现错误:", errors);
     }
+}
+
+function showSourceInfo(key) {
+    const recipe = recipes[key];
+    const $container = $('#source-info-container');
+    const $sourceInfo = $('#source-info');
+
+    // 如果没有来源信息，隐藏容器并返回
+    if (!recipe || !recipe.sources || recipe.sources.length === 0) {
+        $container.hide();
+        return;
+    }
+
+    // 构建来源信息HTML
+    let sourcesHtml = '';
+    if (recipe.sources && recipe.sources.length > 0) {
+        sourcesHtml = `
+            <div class="source-item-sources">
+                <h5>获取来源：</h5>
+                <div class="source-list">
+                    ${recipe.sources.map(source => `<span class="source-tag">${source}</span>`).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    // 构建属性标签
+    let propertiesHtml = '';
+    if (recipe.region) {
+        propertiesHtml += `<span class="source-item-property item-region">${recipe.region}</span>`;
+    }
+    if (recipe.rarity) {
+        propertiesHtml += `<span class="source-item-property item-rarity">${recipe.rarity}</span>`;
+    }
+    if (recipe.price !== undefined && recipe.price !== 0) {
+        propertiesHtml += `<span class="source-item-property item-price">${recipe.price}m</span>`;
+    }
+    if (!recipe.ingredients) {
+        propertiesHtml += `<span class="source-item-property item-base">基础物品</span>`;
+    }
+
+    // 构建完整HTML
+    const iconUrl = getIconUrl(key);
+    const iconHtml = iconUrl ?
+        `<img src="${iconUrl}" alt="${key}">` :
+        `<div class="item-icon-unknown item-icon-unknown-double">${key.replace(/[^A-Za-z0-9一-龟]+/g, '').charAt(0) + key.replace(/[^A-Za-z0-9一-龟]+/g, '').slice(-1)}</div>`;
+
+    const html = `
+        <div class="source-item-header">
+            <div class="source-item-icon">
+                ${iconHtml}
+            </div>
+            <div class="source-item-details">
+                <div class="source-item-name">${key}</div>
+                <div class="source-item-properties">
+                    ${propertiesHtml}
+                </div>
+                ${sourcesHtml}
+            </div>
+        </div>
+    `;
+
+    $sourceInfo.html(html);
+    $container.show();
 }
 
 $(function () {

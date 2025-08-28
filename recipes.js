@@ -16,7 +16,8 @@ let recipes = {
         ],
         "price": 0,
         "region": "t5",
-        "rarity": "稀有"
+        "rarity": "稀有",
+        "sources": ["t5-哥布林战车(蓝图)", "t5-哥布林国王(boss)(蓝图)"]
     },
     "哥布林号角": {
         "ingredients": [
@@ -27,7 +28,8 @@ let recipes = {
         ],
         "price": 0,
         "region": "t5",
-        "rarity": "普通"
+        "rarity": "普通",
+        "sources": ["t5-哥布林战车(蓝图)"]
     },
     "铁折剑": {
         "ingredients": [
@@ -39,7 +41,8 @@ let recipes = {
         ],
         "price": 0,
         "region": "t5",
-        "rarity": "普通"
+        "rarity": "普通",
+        "sources": ["t5-哥布林刺客(蓝图)"]
     },
     "哥布林疾步之靴": {
         "ingredients": [
@@ -50,7 +53,8 @@ let recipes = {
         ],
         "price": 0,
         "region": "t5",
-        "rarity": "普通"
+        "rarity": "普通",
+        "sources": ["t5-哥布林刺客(蓝图)"]
     },
     "哥布林战旗": {
         "ingredients": [
@@ -61,7 +65,8 @@ let recipes = {
         ],
         "price": 0,
         "region": "t5",
-        "rarity": "普通"
+        "rarity": "普通",
+        "sources": ["t5-哥布林巫师(蓝图)", "t5-远古哥布林(召唤boss)(蓝图)"]
     },
     "哥布林强弩": {
         "ingredients": [
@@ -73,7 +78,8 @@ let recipes = {
         ],
         "price": 0,
         "region": "t5",
-        "rarity": "普通"
+        "rarity": "普通",
+        "sources": ["t5-哥布林炮手(蓝图)", "t5-恐惧稻草人(boss)(蓝图)"]
     },
     "哥布林弯刀": {
         "ingredients": [
@@ -84,7 +90,8 @@ let recipes = {
         ],
         "price": 0,
         "region": "t5",
-        "rarity": "普通"
+        "rarity": "稀有",
+        "sources": ["t5-哥布林大法师(蓝图)", "t5-远古哥布林(召唤boss)(蓝图)"]
     },
     "钢残盾": {
         "ingredients": [
@@ -95,7 +102,8 @@ let recipes = {
         ],
         "price": 0,
         "region": "t5",
-        "rarity": "普通"
+        "rarity": "普通",
+        "sources": ["t5-哥布林近卫(蓝图)"]
     },
     "诅咒魔盾": {
         "ingredients": [
@@ -107,7 +115,8 @@ let recipes = {
         ],
         "price": 0,
         "region": "t5",
-        "rarity": "稀有"
+        "rarity": "史诗",
+        "sources": ["t5-游离之魂(蓝图)","t5-炎魔(boss)(蓝图)"]
     },
     "水之净化者": {
         "ingredients": [
@@ -116,7 +125,8 @@ let recipes = {
         ],
         "price": 0,
         "region": "t5",
-        "rarity": "普通"
+        "rarity": "稀有",
+        "sources": ["t5-水灵(蓝图)","t5-异构水灵兽(boss)(蓝图)"]
     },
     "嗜血绣剑": {
         "ingredients": [
@@ -128,7 +138,8 @@ let recipes = {
         ],
         "price": 0,
         "region": "t5",
-        "rarity": "稀有"
+        "rarity": "史诗",
+        "sources": ["t5-骷髅骑士(蓝图)","t5-芙兰克琳(boss)(蓝图)"]
     },
     "无锋重剑": {
         "ingredients": [
@@ -140,7 +151,8 @@ let recipes = {
         ],
         "price": 100000,
         "region": "t5",
-        "rarity": "史诗"
+        "rarity": "传说",
+        "sources": ["t5-远古哥布林(召唤boss)(蓝图)"]
     },
     "国王权杖": {
         "ingredients": [
@@ -151,7 +163,8 @@ let recipes = {
         ],
         "price": 50000,
         "region": "t5",
-        "rarity": "稀有"
+        "rarity": "史诗",
+        "sources": ["t5-哥布林国王(boss)(蓝图)"]
     },
     "荣光壁垒": {
         "ingredients": [
@@ -163,7 +176,8 @@ let recipes = {
         ],
         "price": 50000,
         "region": "t5",
-        "rarity": "史诗"
+        "rarity": "传说",
+        "sources": ["t5-哥布林国王(boss)(蓝图)"]
     },
     "稻草人之心": {
         "ingredients": [
@@ -176,7 +190,8 @@ let recipes = {
         ],
         "price": 50000,
         "region": "t5",
-        "rarity": "史诗"
+        "rarity": "传说",
+        "sources": ["t5-恐惧稻草人(boss)(蓝图)", "t5-稻草人(蓝图)"]
     },
     "地狱魔躯": {
         "ingredients": [
@@ -199,7 +214,8 @@ let recipes = {
         ],
         "price": 100000,
         "region": "t5",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t5-芙兰克琳(boss)(蓝图)"]
     },
     "水灵法杖": {
         "ingredients": [
@@ -212,7 +228,8 @@ let recipes = {
         ],
         "price": 100000,
         "region": "t5",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t5-异构水灵兽(boss)(蓝图)"]
     },
     "禁忌契约": {
         "ingredients": [
@@ -223,7 +240,8 @@ let recipes = {
         ],
         "price": 100000,
         "region": "t5",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t5-炎魔(boss)(蓝图)"]
     },
     "贪欲斧枪": {
         "ingredients": [
@@ -336,7 +354,8 @@ let recipes = {
             ["铁锭", 128]
         ],
         "region": "t4",
-        "rarity": "稀有"
+        "rarity": "稀有",
+        "sources": ["t4-水银蛛(蓝图)"]
     },
     "猎枪|剧毒水银": {
         "ingredients": [
@@ -346,7 +365,8 @@ let recipes = {
             ["铁锭", 64]
         ],
         "region": "t4",
-        "rarity": "普通"
+        "rarity": "普通",
+        "sources": ["t4-阿努比斯鼠(蓝图)", "t4-被腐化的矿工(蓝图)"]
     },
     "剧毒净化者": {
         "ingredients": [
@@ -357,7 +377,8 @@ let recipes = {
             ["中型能量结晶", 1]
         ],
         "region": "t4",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["t4-腐尸(蓝图)", "t4-腐化天使(boss)(蓝图)"]
     },
     "剧毒剑盾": {
         "ingredients": [
@@ -367,7 +388,8 @@ let recipes = {
             ["中型能量结晶", 1]
         ],
         "region": "t4",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["t4-暗影嗜毒者(蓝图)", "t4-钢铁变异体(蓝图)"]
     },
     "腐蚀熊刀": {
         "ingredients": [
@@ -377,7 +399,8 @@ let recipes = {
             ["中型能量结晶", 1]
         ],
         "region": "t4",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["t4-蚀心熊(蓝图)", "t4-火魔(boss)(蓝图)"]
     },
     "天使守望者": {
         "ingredients": [
@@ -387,7 +410,8 @@ let recipes = {
         ],
         "price": 5000,
         "region": "t4",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t4-腐化天使(boss)(蓝图)"]
     },
     "远古净化者之灵": {
         "ingredients": [
@@ -411,7 +435,8 @@ let recipes = {
         ],
         "price": 5000,
         "region": "t4",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t4-火魔(boss)(蓝图)"]
     },
     "恶魔契约": {
         "ingredients": [
@@ -424,7 +449,8 @@ let recipes = {
         ],
         "price": 10000,
         "region": "t4",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t4-火魔(boss)(蓝图)"]
     },
     "短斧|屠夫": { // 名称中的|保留
         "ingredients": [
@@ -436,7 +462,8 @@ let recipes = {
         ],
         "price": 5000,
         "region": "t4",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t4-瓦尔基里(boss)(蓝图)"]
     },
     "腐化巨盾": {
         "ingredients": [
@@ -448,7 +475,8 @@ let recipes = {
         ],
         "price": 5000,
         "region": "t4",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t4-瓦尔基里(boss)(蓝图)"]
     },
     "短斧|圣光": {
         "ingredients": [
@@ -460,7 +488,8 @@ let recipes = {
         ],
         "price": 10000,
         "region": "t4",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t4-腐化之源(召唤boss）(蓝图)"]
     },
 
     // a2本
@@ -472,7 +501,8 @@ let recipes = {
             ["电爆盾", 4]
         ],
         "region": "a2",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["a2-寒霜控制师(蓝图)"]
     },
     "血液亵渎者": {
         "ingredients": [
@@ -482,7 +512,8 @@ let recipes = {
             ["治疗仪", 2]
         ],
         "region": "a2",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["a2-混沌控制师(蓝图)", "a2-堡垒(蓝图)", "a2-科学家佐拉(蓝图)"]
     },
     "堡垒制造机": {
         "ingredients": [
@@ -493,7 +524,8 @@ let recipes = {
             ["铁块", 32]
         ],
         "region": "a2",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["a2-堡垒(蓝图)"]
     },
     "佐拉的机械科技头盔": {
         "ingredients": [
@@ -515,7 +547,8 @@ let recipes = {
         ],
         "price": 5000,
         "region": "a2",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["a2-堡垒(蓝图)"]
     },
     "混沌枪": {
         "ingredients": [
@@ -537,7 +570,8 @@ let recipes = {
         ],
         "price": 5000,
         "region": "a2",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["a2-科学家佐拉(蓝图)"]
     },
 
     // a1本
@@ -549,7 +583,8 @@ let recipes = {
             ["奇异木", 16]
         ],
         "region": "a1",
-        "rarity": "普通"
+        "rarity": "普通",
+        "sources": ["a1-云端守护者(蓝图)", "a1-安可（boss）(蓝图)", "a1-暗影守卫（boss）(蓝图)", "a1-塔克（boss）(蓝图)"]
     },
     "彩虹利刃": {
         "ingredients": [
@@ -558,7 +593,8 @@ let recipes = {
             ["铅块", 64]
         ],
         "region": "a1",
-        "rarity": "稀有"
+        "rarity": "稀有",
+        "sources": ["a1-云彩怪(蓝图)", "a1-塔克（boss）(蓝图)"]
     },
     "云盾": {
         "ingredients": [
@@ -567,7 +603,8 @@ let recipes = {
             ["云矿", 32]
         ],
         "region": "a1",
-        "rarity": "普通"
+        "rarity": "普通",
+        "sources": ["a1-云彩怪(蓝图)", "a1-安可（boss）(蓝图)", "a1-暗影守卫（boss）(蓝图)", "a1-塔克（boss）(蓝图)"]
     },
     "五彩精灵": {
         "ingredients": [
@@ -577,7 +614,8 @@ let recipes = {
             ["铅块", 64]
         ],
         "region": "a1",
-        "rarity": "稀有"
+        "rarity": "稀有",
+        "sources": ["a1-树精(蓝图)", "a1-安可（boss）(蓝图)"]
     },
     "奇异钢盾": {
         "ingredients": [
@@ -587,7 +625,8 @@ let recipes = {
             ["奇异木", 32]
         ],
         "region": "a1",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["a1-安可（boss）(蓝图)", "a1-塔克（boss）(蓝图)"]
     },
     "魔力枪": {
         "ingredients": [
@@ -598,7 +637,8 @@ let recipes = {
             ["魔矿", 24]
         ],
         "region": "a1",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["a1-暗影守卫（boss）(蓝图)", "a1-塔克（boss）(蓝图)"]
     },
     "赤霄": {
         "ingredients": [
@@ -610,7 +650,8 @@ let recipes = {
         ],
         "price": 1000, // 1000M点
         "region": "a1",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["a1-塔克（boss）(蓝图)"]
     },
     "萨满": {
         "ingredients": [
@@ -623,7 +664,8 @@ let recipes = {
         ],
         "price": 1000, // 1000H点
         "region": "a1",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["a1-暗影守卫（boss）(蓝图)"]
     },
     "圣耀": {
         "ingredients": [
@@ -688,7 +730,8 @@ let recipes = {
             ["钢块", 120]
         ],
         "region": "a1",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["a1-暗影守卫（boss）(蓝图)", "a1-塔克（boss）(蓝图)"]
     },
     "圣石镐": {
         "ingredients": [
@@ -790,7 +833,8 @@ let recipes = {
             ["贤者之石", 5]
         ],
         "region": "t3",
-        "rarity": "稀有"
+        "rarity": "稀有",
+        "sources": ["t3-半藏(隐藏boss)(蓝图)"]
     },
     "饮血剑": {
         "ingredients": [
@@ -800,7 +844,8 @@ let recipes = {
             ["大太刀", 2]
         ],
         "region": "t3",
-        "rarity": "稀有"
+        "rarity": "稀有",
+        "sources": ["t3-大威仪师(boss)(蓝图)", "t3-奈良(boss)(蓝图)"]
     },
     "恐惧之眼": {
         "ingredients": [
@@ -810,7 +855,8 @@ let recipes = {
             ["利刃白鞘", 2]
         ],
         "region": "t3",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["t3-奈良(boss)(蓝图)"]
     },
     "千鹤村正": {
         "ingredients": [
@@ -820,7 +866,8 @@ let recipes = {
             ["饮血剑", 1]
         ],
         "region": "t3",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["t3-足轻首领(蓝图)", "t3-前庭主持(蓝图)", "t3-中庭护卫(蓝图)", "t3-后庭武士(蓝图)", "t3-传教士(蓝图)", "t3-真理子(蓝图)", "t3-大威仪师(boss)(蓝图)", "t3-奈良(boss)(蓝图)", "t3-半藏(隐藏boss)(蓝图)"]
     },
     "妖刀红月": {
         "ingredients": [
@@ -830,7 +877,8 @@ let recipes = {
             ["影舞伞", 1]
         ],
         "region": "t3",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["t3-足轻首领(蓝图)", "t3-前庭主持(蓝图)", "t3-中庭护卫(蓝图)", "t3-后庭武士(蓝图)", "t3-传教士(蓝图)", "t3-真理子(蓝图)", "t3-大威仪师(boss)(蓝图)", "t3-奈良(boss)(蓝图)", "t3-半藏(隐藏boss)(蓝图)"]
     },
     "白狐": {
         "ingredients": [
@@ -840,7 +888,8 @@ let recipes = {
         ],
         "price": 1000,
         "region": "t3",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t3-大威仪师(boss)(蓝图)", "t3-石川五右卫门(召唤boss)(蓝图)"]
     },
     "结月付丧": {
         "ingredients": [
@@ -851,7 +900,8 @@ let recipes = {
         ],
         "price": 1000,
         "region": "t3",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t3-大威仪师(boss)(蓝图)", "t3-石川五右卫门(召唤boss)(蓝图)"]
     },
     "远古龙之怒": {
         "ingredients": [
@@ -875,7 +925,8 @@ let recipes = {
             ["恢复型面包", 256]
         ],
         "region": "t3",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["t3-石川五右卫门(召唤boss)(蓝图)"]
     },
 
     // t3.5本
@@ -890,7 +941,8 @@ let recipes = {
         ],
         "price": 20000,
         "region": "t3.5",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t3.5-樱琴(boss)(蓝图)"]
     },
     "樱|圣盾": {
         "ingredients": [
@@ -903,7 +955,8 @@ let recipes = {
         ],
         "price": 20000,
         "region": "t3.5",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t3.5-樱琴(boss)(蓝图)"]
     },
     "渔获": {
         "ingredients": [
@@ -913,7 +966,8 @@ let recipes = {
             ["魔法泉水", 32]
         ],
         "region": "t3.5",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["t3.5-樱琴(boss)(蓝图)"]
     },
     "樱|圣剑": {
         "ingredients": [
@@ -926,7 +980,8 @@ let recipes = {
         ],
         "price": 20000,
         "region": "t3.5",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t3.5-樱主(boss)(蓝图)"]
     },
     "黑缨枪": {
         "ingredients": [
@@ -936,7 +991,8 @@ let recipes = {
             ["凝血素", 32]
         ],
         "region": "t3.5",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["t3.5-樱主(boss)(蓝图)"]
     },
     "樱|契约": {
         "ingredients": [
@@ -950,7 +1006,8 @@ let recipes = {
         ],
         "price": 20000,
         "region": "t3.5",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t3.5-樱之使者(蓝图)", "t3.5-樱琴(boss)(蓝图)"]
     },
     "樱花木屐": {
         "ingredients": [
@@ -970,7 +1027,8 @@ let recipes = {
             ["瓶中恶魔", 16]
         ],
         "region": "t3.5",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["t3.5-樱主(boss)(蓝图)"]
     },
 
     // t2本
@@ -980,7 +1038,8 @@ let recipes = {
             ["变异血液", 12]
         ],
         "region": "t2",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["t1-霍斯(boss)(蓝图)", "t1.5-蛮王(boss)(蓝图)", "t2-精锐守卫(蓝图)", "t2-南蛮教主(boss)(蓝图)", "t2-暗辐射者(隐藏boss)(蓝图)", "t2-比蒙巨兽(召唤boss)(蓝图)", "t2.5-冰雪女王(boss)(蓝图)", "t2.5-死神(boss)(蓝图)"]
     },
     "镀金长刃": {
         "ingredients": [
@@ -989,7 +1048,8 @@ let recipes = {
             ["精制骨刀", 1]
         ],
         "region": "t2",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["t1-霍斯(boss)(蓝图)", "t1.5-蛮王(boss)(蓝图)", "t2-暗辐射者(hidden boss)(蓝图)", "t2-比蒙巨兽(召唤boss)(蓝图)"]
     },
     "生命之泉": {
         "ingredients": [
@@ -998,7 +1058,8 @@ let recipes = {
             ["原始守护者", 2]
         ],
         "region": "t2",
-        "rarity": "稀有"
+        "rarity": "稀有",
+        "sources": ["t2-守卫者", "t2-血奴", "a1-树精", "t2-守卫者(蓝图)", "t2-南蛮教主(boss)(蓝图)"]
     },
     "血液操纵者": {
         "ingredients": [
@@ -1007,16 +1068,8 @@ let recipes = {
             ["守护核心", 6]
         ],
         "region": "t2",
-        "rarity": "史诗"
-    },
-    "军团圣盾": {
-        "ingredients": [
-            ["守护核心", 16],
-            ["胶水", 16],
-            ["多兰之盾", 1]
-        ],
-        "region": "t2",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["t2-血奴(蓝图)", "t2-比蒙巨兽(召唤boss)(蓝图)", "t2.5-死神(boss)","a2-混沌控制师(蓝图)"]
     },
     "天使守护者": {
         "ingredients": [
@@ -1025,7 +1078,8 @@ let recipes = {
             ["原始守护者", 1]
         ],
         "region": "t2",
-        "rarity": "稀有"
+        "rarity": "稀有",
+        "sources": ["t1-霍斯(boss)(蓝图)", "t2-血奴(蓝图)", "t2-南蛮教主(boss)(蓝图)", "t2-比蒙巨兽(召唤boss)(蓝图)", "t2.5-冰雪女王(boss)", "a1-天使(蓝图)"]
     },
     "精灵守护者": {
         "ingredients": [
@@ -1035,7 +1089,8 @@ let recipes = {
         ],
         "price": 500,
         "region": "t2",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t2-南蛮教主(boss)(蓝图)", "t2-暗辐射者(隐藏boss)(蓝图)", "t2-比蒙巨兽(召唤boss)(蓝图)"]
     },
     "汲血刀": {
         "ingredients": [
@@ -1045,7 +1100,8 @@ let recipes = {
         ],
         "price": 500,
         "region": "t2",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t2-南蛮教主(boss)(蓝图)", "t2-暗辐射者(隐藏boss)(蓝图)", "t2-比蒙巨兽(召唤boss)(蓝图)"]
     },
     "远古守卫护腕": {
         "ingredients": [
@@ -1057,7 +1113,8 @@ let recipes = {
         ],
         "price": 100000,
         "region": "t2",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t2-突变守卫者(召唤boss)(蓝图)"]
     },
     "守卫者长剑|刺客": {
         "ingredients": [
@@ -1069,7 +1126,8 @@ let recipes = {
         ],
         "price": 2000,
         "region": "t2",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t2-突变守卫者(召唤boss)(蓝图)"]
     },
     "守卫者长剑|纯正": {
         "ingredients": [
@@ -1082,7 +1140,8 @@ let recipes = {
         ],
         "price": 2000,
         "region": "t2",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t2-突变守卫者(召唤boss)(蓝图)"]
     },
     "守卫者长剑|猎手": {
         "ingredients": [
@@ -1094,7 +1153,8 @@ let recipes = {
         ],
         "price": 2000,
         "region": "t2",
-        "rarity": "传说"
+        "rarity": "传说",
+        "sources": ["t2-突变守卫者(召唤boss)(蓝图)"]
     },
     "雪精灵": {
         "ingredients": [
@@ -1106,7 +1166,8 @@ let recipes = {
             ["天使守护者", 2]
         ],
         "region": "t2.5",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["t2.5-冰雪女王(boss)(蓝图)"]
     },
     "短弯刀": {
         "ingredients": [
@@ -1118,10 +1179,11 @@ let recipes = {
             ["汲血刀", 1]
         ],
         "region": "t2.5",
-        "rarity": "史诗"
+        "rarity": "史诗",
+        "sources": ["t2.5-死神(boss)(蓝图)"]
     },
 
-    // t1本
+    // t1本饿了、、
     "原始守护者": {
         "ingredients": [
             ["圆石", 64],
@@ -1129,7 +1191,8 @@ let recipes = {
             ["羽毛", 6]
         ],
         "region": "t1",
-        "rarity": "普通"
+        "rarity": "普通",
+        "sources": ["t1-流浪者(蓝图)", "t1-僵尸(蓝图)", "t1-霍斯(boss)(蓝图)", "t1-僵尸", "a1-天使"]
     },
     "粗制骨刀": {
         "ingredients": [
@@ -1138,7 +1201,8 @@ let recipes = {
             ["带刺骨头", 1]
         ],
         "region": "t1",
-        "rarity": "普通"
+        "rarity": "普通",
+        "sources": ["t1-流浪者(蓝图)", "t1-霍斯(boss)(蓝图)", "t2-南蛮教主(boss)(蓝图)"]
     },
     "带刺骨头": {
         "ingredients": [
@@ -1147,7 +1211,8 @@ let recipes = {
             ["胶水", 4]
         ],
         "region": "t1",
-        "rarity": "普通"
+        "rarity": "普通",
+        "sources": ["t1-流浪者(蓝图)", "t1-僵尸(蓝图)", "t1-哥布林(蓝图)", "t1-霍斯(boss)(蓝图)"]
     },
     "精制骨刀": {
         "ingredients": [
@@ -1156,7 +1221,8 @@ let recipes = {
             ["胶水", 8]
         ],
         "region": "t2",
-        "rarity": "稀有"
+        "rarity": "稀有",
+        "sources": ["t1-流浪者(蓝图)", "t1-僵尸(蓝图)", "t1-哥布林(蓝图)", "t1-霍斯(boss)(蓝图)", "t2-血奴(蓝图)", "t2-南蛮教主(boss)(蓝图)"]
     },
     "多兰之盾": {
         "ingredients": [
@@ -1165,7 +1231,8 @@ let recipes = {
             ["带刺骨头", 1]
         ],
         "region": "t1",
-        "rarity": "稀有"
+        "rarity": "稀有",
+        "sources": ["t1-霍斯(boss)(蓝图)", "t1.5-蛮王(boss)(蓝图)"]
     },
     "远古野兽契约": {
         "ingredients": [
@@ -1194,8 +1261,19 @@ let recipes = {
             ["放逐之魂", 32],
             ["中型能量结晶", 4]
         ],
-        "region": "t1",
-        "rarity": "史诗"
+        "region": "t1.5",
+        "rarity": "史诗",
+        "sources": ["t1.5-放逐者(蓝图)", "t1.5-攀爬者(蓝图)", "t1.5-潜行者(蓝图)", "t1.5-蛮王(boss)(蓝图)"]
+    },
+    "军团圣盾": {
+        "ingredients": [
+            ["守护核心", 16],
+            ["胶水", 16],
+            ["多兰之盾", 1]
+        ],
+        "region": "t1.5",
+        "rarity": "史诗",
+        "sources": ["t1.5-蛮王(boss)(蓝图)"]
     },
     "自然天使": {
         "ingredients": [
@@ -1206,8 +1284,9 @@ let recipes = {
             ["生命之泉", 2],
             ["中型能量结晶", 3]
         ],
-        "region": "t1",
-        "rarity": "史诗"
+        "region": "t1.5",
+        "rarity": "史诗",
+        "sources": ["t1.5-放逐者(蓝图)", "t1.5-攀爬者(蓝图)", "t1.5-潜行者(蓝图)", "t1.5-蛮王(boss)(蓝图)"]
     },
     "野蛮之王的长刃": {
         "ingredients": [
@@ -1216,8 +1295,9 @@ let recipes = {
             ["大型能量结晶", 2]
         ],
         "price": 10000,
-        "region": "t1",
-        "rarity": "传说"
+        "region": "t1.5",
+        "rarity": "传说",
+        "sources": ["t1.5-放逐者(蓝图)", "t1.5-攀爬者(蓝图)", "t1.5-潜行者(蓝图)", "t1.5-蛮王(boss)(蓝图)"]
     },
     "野蛮长盾": {
         "ingredients": [
@@ -1230,39 +1310,50 @@ let recipes = {
             ["大型能量结晶", 1]
         ],
         "price": 1000,
-        "region": "t1",
-        "rarity": "史诗"
+        "region": "t1.5",
+        "rarity": "传奇",
+        "sources": ["t1.5-蛮王(boss)(蓝图)"]
     },
 
-    "金锭": {region: "普通矿", rarity: "普通"},
     "红石粉": {region: "普通矿", rarity: "普通"},
     "血刃粗胚": {region: "t5", rarity: "稀有"},
-    "炽热的锻铁": {region: "t5", rarity: "普通"},
-    "兽皮": {region: "t5", rarity: "普通"},
+    "炽热的锻铁": {region: "t5", rarity: "普通",
+        "sources": ["t5-哥布林战车", "t5-哥布林近卫", "t5-远古哥布林(召唤boss)"]},
+    "兽皮": {region: "t5", rarity: "普通",
+        "sources": ["t5-哥布林居民"]},
     "守卫者长靴": {region: "t2", rarity: "稀有"},
     "哥布林肩甲": {region: "t5", rarity: "稀有"},
     "飞速丸": {region: "无", rarity: "稀有"},
-    "紫色水晶": {region: "t5", rarity: "史诗"},
-    "破损齿轮": {region: "t5", rarity: "传说"},
-    "魔法卷轴": {region: "t5", rarity: "史诗"},
-    "炮弹": {region: "t5", rarity: "稀有"},
-    "黄色水晶": {region: "t5", rarity: "史诗"},
-    "沙漠残骸": {region: "t5", rarity: "普通"},
-    "虫肉": {region: "t5", rarity: "普通"},
+    "紫色水晶": {region: "t5", rarity: "史诗",
+        "sources": ["t5-哥布林巫师", "t5-哥布林国王(boss)"]},
+    "破损齿轮": {region: "t5", rarity: "传说",
+        "sources": ["t5-哥布林战车", "t5-远古哥布林(召唤boss)"]},
+    "魔法卷轴": {region: "t5", rarity: "史诗",
+        "sources": ["t5-哥布林大法师"]},
+    "炮弹": {region: "t5", rarity: "稀有",
+    },
+    "黄色水晶": {region: "t5", rarity: "史诗",
+        "sources": ["t5-阿努比斯守护神"]},
+    "沙漠残骸": {region: "t5", rarity: "普通",
+        "sources": ["t5-骷髅骑士"]},
+    "虫肉": {region: "t5", rarity: "普通",
+        "sources": ["t5-荒漠谜虫","t5-炽热沙虫"]},
     "浮岛基岩": {region: "空岛矿", rarity: "普通"},
-    "精灵之魂": {region: "t5", rarity: "稀有"},
-    "游离之魂": {region: "t5", rarity: "史诗"},
+    "精灵之魂": {region: "t5", rarity: "稀有",
+        "sources": ["t5-水灵","t5-异构水灵兽(boss)"]},
+    "游离之魂": {region: "t5", rarity: "史诗",
+        "sources": ["t5-游离之魂","t5-炎魔(boss)"]},
     "大型能量结晶": {region: "无", rarity: "传说"},
     "干草块": {region: "t1", rarity: "普通"},//
     "南瓜": {region: "t1", rarity: "普通"},//
-    "钛金矿": {region: "空岛矿", rarity: "史诗"},
-    "恶魔拐杖": {region: "t5", rarity: "史诗"},
-    "古兰纳斯之羽": {region: "t5", rarity: "传说"},
-    "幽火碎片": {region: "t5", rarity: "传说"},
-    "贪婪宝石": {region: "t5", rarity: "传说"},
-    "绿色水晶": {
-        region: "t5", rarity: "史诗",
-    },
+    "古兰纳斯之羽": {region: "t5", rarity: "传说",
+        "sources": ["t5-古兰纳斯(隐藏boss)"]},
+    "幽火碎片": {region: "t5", rarity: "传说",
+        "sources": ["t5-幽火虫"]},
+    "贪婪宝石": {region: "t5", rarity: "传说",
+        "sources": ["t5-古兰纳斯(隐藏boss)"]},
+    "绿色水晶": {region: "t5", rarity: "史诗",
+        "sources": ["t5-恐惧稻草人(boss)", "t5-稻草人"]},
 
     "一阶精铁锭": {region: "塔", rarity: "普通"},
     "二阶世界树枝干": {region: "塔", rarity: "普通"},
@@ -1274,52 +1365,79 @@ let recipes = {
     "三阶魔力粉尘": {region: "塔", rarity: "普通"},
     "不灭的余烬": {region: "塔", rarity: "史诗"},
     "四阶四焰铁笼": {region: "塔", rarity: "稀有"},
-    "猩红矿": {region: "a1", rarity: "普通"},//
     "红莲宝石": {region: "无", rarity: "传说"},//
     "四阶囚焰铁笼": {region: "塔", rarity: "稀有"},
     "四阶傀儡碎片": {region: "塔", rarity: "稀有"},
     "四阶提偶碎片": {region: "塔", rarity: "稀有"},
 
-    "毒液": {region: "t4", rarity: "普通"},
-    "腐蚀法杖": {region: "t4", rarity: "普通"},
-    "铁锭": {region: "普通矿", rarity: "普通"},
-    "水银": {region: "t4", rarity: "普通"},
-    "净化石": {region: "t4", rarity: "史诗"},
-    "防腐剂": {region: "t4", rarity: "稀有"},
-    "腐化水晶": {region: "t4", rarity: "稀有"},
+    "毒液": {region: "t4", rarity: "普通",
+        "sources": ["t4-水银蛛", "t4-暗影嗜毒者"]},
+    "腐蚀法杖": {region: "t4", rarity: "普通",
+        "sources": ["t4-阿努比斯鼠", "t4-野生恶魔"]},
+    "水银": {region: "t4", rarity: "普通",
+        "sources": ["t4-毒液", "t4-水银蛛", "t4-阿努比斯鼠"]},
+    "净化石": {region: "t4", rarity: "史诗",
+        "sources": ["t4-阿努比斯鼠", "t4-被腐化的矿工"]},
+    "防腐剂": {region: "t4", rarity: "稀有",
+        "sources": ["t4-腐尸", "t4-腐化天使(boss)", "t4-瓦尔基里(boss)", "t4-火魔(boss)", "t4-腐化之源(召唤boss）"]},
+    "腐化水晶": {region: "t4", rarity: "稀有",
+        "sources": ["t4-水银蛛", "t4-野生恶魔", "t4-蚀心熊", "t4-腐化天使(boss)", "t4-瓦尔基里(boss)", "t4-火魔(boss)", "t4-腐化之源(召唤boss）"]},
     "中型能量结晶": {region: "无", rarity: "史诗"}, //
-    "腐蚀液体": {region: "t4", rarity: "稀有"},
+    "腐蚀液体": {region: "t4", rarity: "稀有",
+        "sources": ["t2-突变守卫者(召唤boss)", "t4-毒液", "t4-腐尸", "t4-暗影嗜毒者", "t4-蚀心熊", "t4-腐化天使(boss)", "t4-瓦尔基里(boss)", "t4-火魔(boss)", "t4-腐化之源(召唤boss）"]},
     "净化之灵": {region: "t4", rarity: "史诗"},
-    "腐蚀钢": {region: "t4", rarity: "传说"},
-    "嗜血宝石": {region: "无", rarity: "史诗"},
-    "月光宝石": {region: "无", rarity: "史诗"},
-    "无尽宝石": {region: "无", rarity: "史诗"},
+    "恶魔拐杖": {region: "t4", rarity: "史诗",
+        "sources": ["t4-野生恶魔", "t4-火魔(boss)"]},
+    "腐蚀钢": {region: "t4", rarity: "传说",
+        "sources": ["t2-突变守卫者(召唤boss)", "t4-腐化天使(boss)", "t4-瓦尔基里(boss)", "t4-火魔(boss)", "t4-腐化之源(召唤boss）"]},
+    "嗜血宝石": {region: "无", rarity: "史诗",
+        "sources": ["t4-瓦尔基里(boss)(宝石)", "t4-腐化之源(召唤boss）(宝石)"]},
+    "月光宝石": {region: "无", rarity: "史诗",
+        "sources": ["t4-腐化天使(boss)(宝石)", "t4-腐化之源(召唤boss）(宝石)"]},
+    "无尽宝石": {region: "无", rarity: "史诗",
+        "sources": ["t4-火魔(boss)(宝石)", "t4-腐化之源(召唤boss）(宝石)"]},
     "恶魔之泉": {region: "t4", rarity: "稀有"},
     "瓶中恶魔": {region: "t4", rarity: "稀有"},
 
-    "闪电核心": {region: "a2", rarity: "普通"},
-    "寒霜核心": {region: "a2", rarity: "稀有"},
+    "闪电核心": {region: "a2", rarity: "普通",
+        "sources": ["a2-断腿机器人", "a2-断手机器人", "a2-混沌控制师", "a2-闪电召唤师"]},
+    "寒霜核心": {region: "a2", rarity: "稀有",
+        "sources": ["a2-断手机器人", "a2-寒霜控制师", "a2-混沌控制师", "a2-闪电召唤师", "a2-自爆机器人", "a2-洪流", "a2-科学家佐拉"]},
     "机械核心": {region: "a2", rarity: "史诗"},
-    "电爆盾": {region: "a2", rarity: "稀有"},
-    "混沌核心": {region: "a2", rarity: "史诗"},
-    "治疗仪": {region: "a2", rarity: "稀有"},
+    "电爆盾": {region: "a2", rarity: "稀有",
+        "sources": ["a2-闪电召唤师", "a2-自爆机器人"]},
+    "混沌核心": {region: "a2", rarity: "史诗",
+        "sources": ["a2-断腿机器人", "a2-断手机器人", "a2-寒霜控制师", "a2-混沌控制师", "a2-闪电召唤师", "a2-自爆机器人", "a2-洪流", "a2-堡垒", "a2-科学家佐拉"]},
+    "治疗仪": {region: "a2", rarity: "稀有",
+        "sources": ["a2-断手机器人", "a2-闪电召唤师"]},
     "铁块": {region: "普通矿", rarity: "普通"},
     "智械核心": {region: "a2", rarity: "传说"},
-    "重氢": {region: "a2", rarity: "传说"},
-    "激光发射器": {region: "a2", rarity: "稀有"},
+    "重氢": {region: "a2", rarity: "传说",
+        "sources": ["a2-洪流", "a2-堡垒", "a2-科学家佐拉"]},
+    "激光发射器": {region: "a2", rarity: "稀有",
+        "sources": ["a2-断腿机器人"]},
 
-    "云朵": {region: "a1", rarity: "普通"},
-    "云矿": {region: "a1", rarity: "稀有"},
-    "奇异术": {region: "a1", rarity: "史诗"},
-    "彩虹碎片": {region: "a1", rarity: "稀有"},
+    "云朵": {region: "a1", rarity: "普通",
+        "sources": ["a1-云彩怪", "a1-云端守护者", "a1-天使"]},
+    "云矿": {region: "a1", rarity: "普通",
+        "sources": ["a1-云彩怪", "a1-云端守护者", "a1-树精"]},
+    "奇异术": {region: "a1", rarity: "史诗",
+        "sources": ["a1-树精", "a1-安可（boss）", "a1-暗影守卫（boss）", "a1-塔克（boss）"]},
+    "彩虹碎片": {region: "a1", rarity: "稀有",
+        "sources": ["a1-云彩怪", "a1-云端守护者", "a1-天使", "a1-安可（boss）", "a1-暗影守卫（boss）", "a1-塔克（boss）"]},
     "铅块": {region: "a1", rarity: "稀有"},
     "奇异木": {region: "a1", rarity: "普通"},
-    "魔矿": {region: "a1", rarity: "史诗"},
-    "圣石": {region: "a1", rarity: "传说"},
+    "魔矿": {region: "a1", rarity: "史诗",
+        "sources": ["a1-暗影守卫（boss）", "a1-塔克（boss）"]},
+    "圣石": {region: "a1", rarity: "传说",
+        "sources": ["a1-暗影守卫（boss）", "a1-塔克（boss）"]},
     "钢块": {region: "a1", rarity: "稀有"},
     "武士胸甲": {region: "t2", rarity: "稀有"},
     "石镐(崭新)": {region: "无", rarity: "普通"},
-    "云镐": {region: "a1", rarity: "普通"},
+    "云镐": {region: "a1", rarity: "普通",
+        "sources": ["a1-云彩怪", "a1-云端守护者", "a1-塔克（boss）"]},
+    "猩红矿": {region: "a1", rarity: "史诗",
+        "sources": ["a1-安可（boss）", "a1-暗影守卫（boss）"]},
 
     "陨铁矿": {region: "空岛", rarity: "史诗"},
     "精制铁镐": {region: "t4", rarity: "史诗"},
@@ -1330,54 +1448,93 @@ let recipes = {
     "叶绿矿": {region: "空岛", rarity: "史诗"},
     "交易石": {region: "普通矿", rarity: "史诗"},
 
-    "破布": {region: "t3", rarity: "普通"},
-    "贤者之石": {region: "t3", rarity: "稀有"},
-    "刀鞘": {region: "t3", rarity: "普通"},
-    "凝血素": {region: "t3", rarity: "稀有"},
-    "大太刀": {region: "t3", rarity: "普通"},
-    "钉子": {region: "t3", rarity: "普通"},
-    "利刃白鞘": {region: "t3", rarity: "普通"},
-    "耀魂": {region: "t3", rarity: "稀有"},
-    "弹射器": {region: "t3", rarity: "稀有"},
-    "钢铁": {region: "t3", rarity: "普通"},
+    "破布": {region: "t3", rarity: "普通",
+        "sources": ["t1.5-潜行者", "t3-足轻首领", "t3-中庭护卫", "t3-后庭武士"]},
+    "贤者之石": {region: "t3", rarity: "稀有",
+        "sources": ["t3-足轻首领", "t3-前庭主持", "t3-中庭护卫", "t3-传教士", "t3-真理子", "t3-大威仪师(boss)", "t3-奈良(boss)", "t3-半藏(隐藏boss)", "t3-石川五右卫门(召唤boss)"]},
+    "刀鞘": {region: "t3", rarity: "普通",
+        "sources": ["t3-足轻首领"]},
+    "凝血素": {region: "t3", rarity: "稀有",
+        "sources": ["t3-前庭主持", "t3-奈良(boss)", "t3-半藏(隐藏boss)"]},
+    "大太刀": {region: "t3", rarity: "普通",
+        "sources": ["t3-前庭主持"]},
+    "钉子": {region: "t3", rarity: "普通",
+        "sources": ["t1.5-放逐者", "t3-前庭主持", "t3-后庭武士", "t3-真理子"]},
+    "利刃白鞘": {region: "t3", rarity: "普通",
+        "sources": ["t3-足轻首领", "t3-后庭武士"]},
+    "耀魂": {region: "t3", rarity: "稀有",
+        "sources": ["t3-后庭武士", "t3-大威仪师(boss)", "t3-奈良(boss)", "t3-半藏(隐藏boss)", "t3-石川五右卫门(召唤boss)"]},
+    "弹射器": {region: "t3", rarity: "稀有",
+        "sources": ["t3-传教士", "t3-真理子", "t3.5-樱花护卫军"]},
+    "钢铁": {region: "t3", rarity: "普通",
+        "sources": ["t1.5-攀爬者", "t3-前庭主持", "t3-传教士"]},
     "龙刃": {region: "t3", rarity: "史诗"},
     "迅捷宝石": {region: "t3", rarity: "史诗"},
-    "恢复型面包": {region: "无", rarity: "普通"},
 
     "樱之因子": {region: "t3.5", rarity: "传说"},
-    "樱木棍": {region: "t3.5", rarity: "史诗"},
-    "绿石": {region: "t3.5", rarity: "稀有"},
+    "樱木棍": {region: "t3.5", rarity: "史诗",
+        "sources": ["t3.5-樱花护卫军", "t3.5-樱树精", "t3.5-樱主(boss)", "t3.5-樱琴(boss)"]},
+    "绿石": {region: "t3.5", rarity: "稀有",
+        "sources": ["t3.5-樱之使者", "t3.5-樱花护卫军", "t3.5-樱树精", "t3.5-樱主(boss)", "t3.5-樱琴(boss)"]},
     "魔法泉水": {region: "t3.5", rarity: "稀有"},
-    "技巧宝石": {region: "t3.5", rarity: "史诗"},
-    "樱花粉": {region: "t3.5", rarity: "史诗"},
+    "技巧宝石": {region: "t3.5", rarity: "史诗",
+        "sources": ["t3.5-樱树精(宝石)"]},
+    "樱花粉": {region: "t3.5", rarity: "史诗",
+        "sources": ["t3.5-樱之使者", "t3.5-樱花护卫军", "t3.5-樱树精", "t3.5-樱主(boss)", "t3.5-樱琴(boss)"]},
     "钻石块": {region: "普通矿", rarity: "普通"},
 
-    "远古守卫者之剑": {region: "t2", rarity: "史诗"},
-    "守卫者长剑": {region: "t2", rarity: "普通"},
-    "变异血液": {region: "t2", rarity: "稀有"},
-    "守护核心": {region: "t2", rarity: "稀有"},
-    "冰盾": {region: "t2.5", rarity: "传说"},
-    "冰雪镰刀": {region: "t2.5", rarity: "传说"},
-    "零件": {region: "t2.5", rarity: "史诗"},
+    "远古守卫者之剑": {region: "t2", rarity: "史诗",
+        "sources": ["t2-突变守卫者(召唤boss)"]},
+    "守卫者长剑": {region: "t2", rarity: "普通",
+        "sources": ["t2-突变守卫者(召唤boss)"]},
+    "变异血液": {region: "t2", rarity: "稀有",
+        "sources": ["t1-霍斯(boss)", "t1-藤蔓树精(boss)", "t2-精锐守卫", "t2-南蛮教主(boss)", "t2-暗辐射者(隐藏boss)", "t2-比蒙巨兽(召唤boss)"]},
+    "守护核心": {region: "t2", rarity: "稀有",
+        "sources": ["t2-守卫者", "t2-精锐守卫", "t2-南蛮教主(boss)", "t2-暗辐射者(隐藏boss)", "t2-比蒙巨兽(召唤boss)", "t2-突变守卫者(召唤boss)"]},
+    "治疗之手": {region: "t2", rarity: "稀有",
+        "sources": ["t2-南蛮教主(boss)"]},
+    "冰盾": {region: "t2.5", rarity: "传说",
+        "sources": ["t2.5-冰雪女王(boss)"]},
+    "冰雪镰刀": {region: "t2.5", rarity: "传说",
+        "sources": ["t2.5-死神(boss)"]},
+    "零件": {region: "t2.5", rarity: "史诗",
+        "sources": ["t2.5-冰雪女王(boss)", "t2.5-死神(boss)", "a2-寒霜控制师"]},
 
     // t1本基础物品
     "圆石": {region: "普通矿", rarity: "普通"},
-    "羽毛": {region: "t1", rarity: "普通"},
-    "胶水": {region: "t1", rarity: "普通"},
-    "骨头": {region: "t1", rarity: "普通"},
-    "树杈": {region: "t1", rarity: "普通"},
+    "羽毛": {region: "t1", rarity: "普通",
+        "sources": ["t1-流浪者", "t1-僵尸", "t1-哥布林", "t1-藤曼树精", "t1-霍斯(boss)", "t2-守卫者", "t2-精锐守卫", "t2-南蛮教主(boss)", "a1-云彩怪"]},
+    "胶水": {region: "t1", rarity: "普通",
+        "sources": ["t1-流浪者", "t1-僵尸", "t1-哥布林", "t1-霍斯(boss)", "t1-藤蔓树精(boss)", "t1-魔法派矿工", "t1.5-放逐者", "t1.5-攀爬者", "t1.5-潜行者", "t2-守卫者", "t2-血奴", "t2-南蛮教主(boss)"]},
+    "骨头": {region: "t1", rarity: "普通",
+        sources: ["t1-流浪者", "t1-僵尸", "t1-哥布林", "t1-霍斯(boss)", "t1-藤蔓树精(boss)", "t1-魔法派矿工", "t2-守卫者", "t2-精锐守卫", "t2-血奴", "t2-南蛮教主(boss)", "t3-真理子"]},
+    "树杈": {region: "t1", rarity: "普通",
+        sources: ["t1-流浪者", "t1-僵尸", "t1-哥布林", "t1-藤曼树精", "t1-霍斯(boss)", "t1-藤蔓树精(boss)", "t2-精锐守卫", "t2-血奴", "t2-南蛮教主(boss)"]},
+    "恢复型面包": {region: "无", rarity: "普通",
+        sources: ["t1-野猪", "t1-流浪者", "t1-哥布林", "t2-精锐守卫", "t3-足轻首领", "t3-前庭主持", "t3-真理子", "a1-云彩怪"]},
     "霍斯契约": {region: "t1", rarity: "史诗"},
-    "原初之灵": {region: "t1", rarity: "史诗"},
+    "原初之灵": {region: "t1", rarity: "史诗",
+        "sources": ["t1-藤蔓树精(boss)"]},
     "钻石镐(崭新)": {region: "无", rarity: "普通"},
-    "钻石": {region: "普通矿", rarity: "普通"},
-    "放逐之魂": {region: "t1", rarity: "史诗"},
-    "攀爬之魂": {region: "t1", rarity: "史诗"},
-    "潜行之魂": {region: "t1", rarity: "史诗"},
+    "放逐之魂": {region: "t1", rarity: "史诗",
+        "sources": ["t1.5-放逐者", "t1.5-蛮王(boss)"]},
+    "攀爬之魂": {region: "t1", rarity: "史诗",
+        "sources": ["t1.5-攀爬者", "t1.5-蛮王(boss)"]},
+    "潜行之魂": {region: "t1", rarity: "史诗",
+        "sources": ["t1.5-潜行者", "t1.5-蛮王(boss)"]},
 
     "镀金法杖": {region: "商店", rarity: "史诗"},
     "镀金长盾": {region: "商店", rarity: "史诗"},
     "哥布林匕首": {region: "商店", rarity: "稀有"},
 
+    "铁锭": {region: "普通矿", rarity: "普通",
+        "sources": ["t4-钢铁变异体", "t4-被腐化的矿工"]},
+    "金锭": {region: "普通矿", rarity: "普通",
+        "sources": ["t4-被腐化的矿工"]},
+    "钻石": {region: "普通矿", rarity: "普通",
+        "sources": ["t4-被腐化的矿工"]},
+    "钛金矿": {region: "空岛矿", rarity: "史诗",
+        "sources": ["a2-洪流", "a2-堡垒", "a2-科学家佐拉"]},
 };
 
 

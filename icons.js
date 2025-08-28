@@ -1663,7 +1663,7 @@ const icons = {
     "守卫者长靴": "slimefun/guardian_boots",
     "哥布林肩甲": "slimefun/goblin_spaulder",
     "飞速丸": "slimefun/high_speed_pill",
-    "紫色水晶": "slimefun/",
+    "紫色水晶": "slimefun/purple_crystal",
     "破损齿轮": "slimefun/damaged_gear",
     "魔法卷轴": "slimefun/magic_scroll",
     "炮弹": "slimefun/cannonball",
@@ -1766,7 +1766,7 @@ const icons = {
     "放逐之魂": "slimefun/banished_soul",
     "攀爬之魂": "slimefun/climbing_soul",
     "潜行之魂": "slimefun/sneaking_soul",
-    "镀金法杖": "slimefun/",
+    "镀金法杖": "slimefun/gilded_staff",
     "镀金长盾": "slimefun/",
     "哥布林匕首": "slimefun/",
 
@@ -1777,7 +1777,7 @@ const icons = {
     "铁折剑": "slimefun/",
     "哥布林疾步之靴": "slimefun/",
     "哥布林战旗": "slimefun/",
-    "哥布林强弩": "slimefun/",
+    "哥布林强弩": "slimefun/goblin_heavy_crossbow",
     "哥布林弯刀": "slimefun/",
     "钢残盾": "slimefun/",
     "诅咒魔盾": "slimefun/",
@@ -1838,7 +1838,7 @@ const icons = {
     "隐秘之镐": "slimefun/",
     "隐秘陨石镐": "slimefun/stealth_meteorite_pickaxe",
     "哥布林弓": "slimefun/",
-    "哥布林法杖": "slimefun/",
+    "哥布林法杖": "slimefun/goblin_staff",
     "发光的金戒指": "slimefun/",
     "猎枪|亡灵杀手": "slimefun/",
     "影舞伞": "slimefun/shadow_dance_umbrella",
@@ -1889,19 +1889,19 @@ const icons = {
     "禁锢卷轴": "slimefun/confinement_scroll",
     "抗火药水": "slimefun/fire_resistance_potion",
     "碎甲晶石": "slimefun/armor_shattering_crystal",
-    "治疗之手": "slimefun/healing_hand",
-    "精致骨刀": "slimefun/exquisite_bone_blade",
+    "治疗之手": "slimefun/healing_hand",//
+    "精致骨刀": "slimefun/exquisite_bone_blade",//
     "毒液面具": "slimefun/venom_mask",
     "武士头盔": "slimefun/samurai_helmet",
     "守卫者头盔": "slimefun/guardian_helmet",
     "守卫者护腿": "slimefun/guardian_leggings",
     "精致铁镐": "slimefun/exquisite_iron_pickaxe",
-    "军团圣盾": "slimefun/legion's_holy_shield",
+    "军团圣盾": "slimefun/legion's_holy_shield",//
     "获水剑": "slimefun/water_obtaining_sword",
-    "贪婪宝石": "slimefun/greed_gem",
+    "贪婪宝石": "slimefun/greed_gem",//
     "小型能量结晶": "slimefun/small_energy_crystal",
-    "古兰纳斯之羽": "slimefun/",
-    "幽火碎片": "slimefun/",
+    "古兰纳斯之羽": "slimefun/",//
+    "幽火碎片": "slimefun/",//
 
 
 }

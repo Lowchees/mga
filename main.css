@@ -446,6 +446,73 @@ input.has-warning:focus {
     font-weight: bold;
 }
 
+/* 来源信息样式 */
+#source-info-container {
+    margin-bottom: 20px;
+}
+
+.source-item-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.source-item-icon {
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.source-item-icon img {
+    width: 64px;
+    height: 64px;
+    image-rendering: pixelated;
+}
+
+.source-item-details {
+    flex-grow: 1;
+}
+
+.source-item-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.source-item-properties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.source-item-property {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: white;
+}
+
+.source-item-sources {
+    margin-top: 15px;
+}
+
+.source-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.source-tag {
+    padding: 5px 10px;
+    background-color: #e9ecef;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #495057;
+    border: 1px solid #dee2e6;
+}
+
 /* 响应式调整 */
 @media (max-width: 768px) {
     #inference-panel li {
@@ -454,5 +521,15 @@ input.has-warning:focus {
 
     .panel-body {
         max-height: 300px;
+    }
+
+    .source-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .source-item-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 }
